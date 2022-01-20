@@ -8,7 +8,13 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show drun -show-icons
+	rofi -modi drun -show drun -line-padding 4 \
+                -columns 2 -padding 50 -hide-scrollbar -terminal alacritty \
+                -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 15"
+
+# powermenu
+super + shift + e
+  ~/.config/rofi/powermenu.sh
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -23,7 +29,7 @@ super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-super + {_,shift + }w
+super + {_,shift + }q
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
@@ -85,38 +91,6 @@ super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 #
-# multimedia
-#
-# mute
-XF86AudioMute
-  pactl set-sink-volume @DEFAULT_SINK@ 0%
-
-# decrease volume
-XF86AudioLowerVolume
-  pactl set-sink-volume @DEFAULT_SINK@ -10%
-
-# increase volume
-XF86AudioRaiseVolume
-  pactl set-sink-volume @DEFAULT_SINK@ +10%
-
-# notifications
-#
-# close the current notification
-ctrl + space
-  dunstctl close
-
-# close all the notifications
-ctrl + shift + space
-  dunstctl close-all
-
-ctrl + shift + period
-  dunstctl context
-
-# show the last notification from the history
-ctrl + grave
-  dunstctl history-pop
-
-#
 # preselect
 #
 
@@ -151,3 +125,59 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# Special hot keys
+#
+ 
+# Multimedia
+ 
+# unmute/mute
+XF86AudioMute
+  amixer -D pulse sset Master toggle-mute
+
+# decrease volume
+XF86AudioLowerVolume
+  amixer -q set Master 5%- unmute
+
+# increase volume
+XF86AudioRaiseVolume
+  amixer -q set Master 5%+ unmute
+
+# brightness up
+XF86MonBrightnessUp
+  brillo -A +5
+
+# brightness down
+XF86MonBrightnessDown
+  brillo -U +5
+
+# notifications
+#
+# close the current notification
+ctrl + space
+  dunstctl close
+
+# close all the notifications
+ctrl + shift + space
+  dunstctl close-all
+
+ctrl + shift + period
+  dunstctl context
+
+# show the last notification from the history
+ctrl + grave
+  dunstctl history-pop
+
+# Shortcuts
+# launch file browser
+super + n
+  pcmanfm
+
+# launch brave browser
+super + w
+  brave-browser
+
+# show keybindings
+super + F1
+  ~/.config/bspwm/scripts/keybindings_rofi.sh

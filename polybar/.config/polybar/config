@@ -1,7 +1,7 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #222
-background-alt = #444
+background-alt = #33444444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
@@ -33,20 +33,16 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-0 = Hack Nerd Font:size=10;1
 
-modules-left = bspwm
-modules-center = 
-modules-right = backlight alsa memory cpu wlan eth battery date powermenu
+modules-left = bspwm xwindow
+modules-right = backlight alsa wlan eth battery date powermenu
 
 tray-position = right
 tray-padding = 2
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
-;wm-restack = i3
+wm-restack = bspwm
 
 ;override-redirect = true
 

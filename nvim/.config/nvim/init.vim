@@ -83,6 +83,7 @@ Plug 'nvim-treesitter/playground'
 
 Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'akinsho/bufferline.nvim'
 
 " Github Copilot
 Plug 'github/copilot.vim'
