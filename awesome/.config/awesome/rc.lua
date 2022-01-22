@@ -51,10 +51,6 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("~/.config/awesome/theme.lua")
 
--- Enable gaps
-beautiful.useless_gap = 2
-beautiful.gap_single_client = true
-
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
 editor = os.getenv("EDITOR") or "editor"
@@ -113,7 +109,9 @@ else
 end
 
 
-mylauncher = awful.widget.launcher({ menu = mymainmenu })
+mylauncher = awful.widget.launcher({ 
+    menu = mymainmenu
+})
 
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
