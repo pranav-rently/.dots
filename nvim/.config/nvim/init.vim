@@ -148,10 +148,10 @@ vnoremap <leader>d "_d
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
 " Easier Moving between splits
-nnoremap <leader><C-J> <C-W><C-J>
-nnoremap <leader><C-K> <C-W><C-K>
-nnoremap <leader><C-L> <C-W><C-L>
-nnoremap <leader><C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " Keep the cursor centered
 nnoremap n nzzzv

@@ -6,4 +6,5 @@ nnoremap <leader>df :lua require('radar.telescope').search_dotfiles()<CR>
 nnoremap <leader>fs :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep for > ")})<CR>
 nnoremap <leader>fb :lua require('telescope.builtin').buffers()<CR>
 nnoremap <leader>fh :lua require('telescope.builtin').help_tags()<CR>
+nnoremap <leader>/ :lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>
 

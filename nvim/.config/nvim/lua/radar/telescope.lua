@@ -5,7 +5,7 @@ telescope.setup {
     defaults = {
         prompt_prefix = "$ ",
         color_devicons = true,
-        file_ignore_patterns = { "^.git/" },
+        file_ignore_patterns = { "^.git/", "^node_modules/" },
         mappings = {
             i = {
                 ['esc'] = actions.close
