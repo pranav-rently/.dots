@@ -25,6 +25,7 @@ set incsearch
 set scrolloff=8
 set tags=./tags;/
 set diffopt+=vertical
+set mouse=a
 
 " Give more space for displaying messages.
 set cmdheight=2
