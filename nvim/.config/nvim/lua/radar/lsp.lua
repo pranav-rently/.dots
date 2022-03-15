@@ -1,7 +1,7 @@
 -- LSP
 
 local nvim_lsp = require('lspconfig')
-local servers = { 'tsserver', 'clangd', 'pyright', 'bashls', 'gopls', 'solargraph', 'solidity_ls' }
+local servers = { 'tsserver', 'clangd', 'pyright', 'bashls', 'gopls', 'solargraph' }
 
 local opts = {
     tools = { -- rust-tools options
