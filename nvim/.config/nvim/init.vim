@@ -67,7 +67,10 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'neovim/nvim-lspconfig'
 
 " Tabnine completion
-" Plug 'aca/completion-tabnine', { 'do': './install.sh' }
+Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+
+" Debugger
+Plug 'mfussenegger/nvim-dap'
 
 " Completion
 Plug 'hrsh7th/nvim-cmp'
