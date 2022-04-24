@@ -1,7 +1,7 @@
 -- LSP
 
 local nvim_lsp = require('lspconfig')
-local servers = { 'tsserver', 'clangd', 'pyright', 'bashls', 'gopls', 'solargraph' }
+local servers = { 'tsserver', 'clangd', 'pyright', 'bashls', 'solargraph' }
 
 local on_attach = function(client, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -35,6 +35,59 @@ for _, lsp in ipairs(servers) do
         on_attach = on_attach
     }
 end
+
+-- GO
+
+nvim_lsp.gopls.setup{
+    cmd = { 'gopls' },
+    -- for postfix snippets and analyzers 
+    capabilities = capabilities,
+    settings = {
+        gopls = {
+            experimentalPostfixCompletions = true,
+            analyses = {
+                unusedparams = true,
+                shadow = true,
+            },
+            staticcheck = true,
+        },
+    },
+    on_attach = on_attach,
+}
+
+-- Rust
+
+local opts = {
+    tools = { -- rust-tools options
+        autoSetHints = true,
+        hover_with_actions = true,
+        inlay_hints = {
+            show_parameter_hints = false,
+            parameter_hints_prefix = "",
+            other_hints_prefix = "",
+        },
+    },
+
+    -- all the opts to send to nvim-lspconfig
+    -- these override the defaults set by rust-tools.nvim
+    -- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
+    server = {
+        -- on_attach is a callback called when the language server attachs to the buffer
+        -- on_attach = on_attach,
+        settings = {
+            -- to enable rust-analyzer settings visit:
+            -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
+            ["rust-analyzer"] = {
+                -- enable clippy on save
+                checkOnSave = {
+                    command = "clippy"
+                },
+            }
+        }
+    },
+}
+
+require('rust-tools').setup(opts)
 
 -- Autocompletion
 

@@ -91,6 +91,9 @@ Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim'
 
+" To enable more of the features of rust-analyzer, such as inlay hints and more!
+Plug 'simrat39/rust-tools.nvim'
+
 " Github Copilot
 Plug 'github/copilot.vim'
 
@@ -195,6 +198,8 @@ augroup highlight_yank
     autocmd!
     au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=150}
 augroup END
+
+autocmd BufWritePre *.go lua vim.lsp.buf.formatting()
 
 lua require'colorizer'.setup()
 
