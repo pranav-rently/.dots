@@ -1,7 +1,7 @@
 -- LSP
 
 local nvim_lsp = require('lspconfig')
-local servers = { 'tsserver', 'clangd', 'pyright', 'bashls', 'solargraph' }
+local servers = { 'tsserver', 'clangd', 'pyright', 'bashls', 'solargraph', 'emmet_ls' }
 
 local on_attach = function(client, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -86,8 +86,21 @@ local opts = {
         }
     },
 }
-
 require('rust-tools').setup(opts)
+
+-- HTML & CSS
+
+--Enable (broadcasting) snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+nvim_lsp.html.setup {
+  capabilities = capabilities,
+}
+
+nvim_lsp.cssls.setup {
+  capabilities = capabilities,
+}
 
 -- Autocompletion
 
