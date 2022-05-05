@@ -9,6 +9,7 @@ export MANWIDTH=999
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.local/bin":$PATH
 export PATH="$HOME/.npm-packages/bin:$PATH"
+export PATH="$HOME/builds/lua-language-server/bin:$PATH"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:/usr/local/go/bin"
 export GOPATH=$HOME/go

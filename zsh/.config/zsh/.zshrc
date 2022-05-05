@@ -10,3 +10,5 @@ source $ZDOTDIR/zshrc
 
 # To load rbenv automatically
 eval "$(rbenv init -)"
+
+alias luamake=/home/rently/builds/lua-language-server/3rd/luamake/luamake
