@@ -20,7 +20,7 @@ configs.setup({
     autopairs = {
         enable = true,
     },
-    indent = { enable = true, disable = { "python", "css" } },
+    indent = { enable = true, disable = { "yaml", "css" } },
     context_commentstring = {
         enable = true,
         enable_autocmd = false,
@@ -35,9 +35,9 @@ configs.setup({
             "Gold",
             "Orchid",
             "DodgerBlue",
-            -- "Cornsilk",
-            -- "Salmon",
-            -- "LawnGreen",
+            "Cornsilk",
+            "Salmon",
+            "LawnGreen",
         },
         disable = { "html" },
     },

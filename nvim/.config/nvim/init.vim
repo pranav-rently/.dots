@@ -5,8 +5,8 @@ set nu
 set nohlsearch
 set hidden
 set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set expandtab
 set smartindent
 set nowrap
@@ -88,6 +88,7 @@ Plug 'onsails/lspkind-nvim'
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
+Plug 'p00f/nvim-ts-rainbow'
 
 Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
