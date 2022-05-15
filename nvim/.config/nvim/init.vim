@@ -1,41 +1,7 @@
 syntax on
 
-set rnu
-set nu
-set nohlsearch
-set hidden
-set noerrorbells
-set tabstop=2 softtabstop=2
-set shiftwidth=2
-set expandtab
-set smartindent
-set nowrap
-set wrap linebreak nolist
-set smartcase
-set noswapfile
-set nobackup
-set showtabline=2
-set undodir=~/.vim/undodir
-set undofile
-set incsearch
-set termguicolors
-set scrolloff=8
-set tags=./tags;/
-set diffopt+=vertical
-set noshowmode
-set mouse=a
 set list
 set listchars=tab:→\ ,extends:›,precedes:‹,nbsp:·,trail:␣,eol:↵
-
-" Give more space for displaying messages.
-set cmdheight=2
-
-" Having longer updatetime (default is 4000 ms = 4 s) leads to
-" noticeable delay time"
-set updatetime=50
-
-" " Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
 
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
