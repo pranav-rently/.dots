@@ -2,6 +2,7 @@ syntax on
 
 set list
 set listchars=tab:→\ ,extends:›,precedes:‹,nbsp:·,trail:␣,eol:↵
+set undodir=~/.vim/undodir
 
 " Plugins
 call plug#begin('~/.config/nvim/plugged')

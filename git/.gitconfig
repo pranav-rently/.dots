@@ -2,7 +2,7 @@
 	name = Pranav RK
 	email = pranav.r@rently.com
 [core]
-	editor = nvim
+	editor = vim
 	diff = auto
 	status = auto
 	branch = auto
@@ -16,9 +16,9 @@
 [alias]
 	st = status
 	ci = commit
-    cm = commit -m
-    ca = commit --amend
-    br = branch
+  cm = commit -m
+  ca = commit --amend
+  br = branch
 	co = checkout
 	ssb = status -sb
 	d = diff
