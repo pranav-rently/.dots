@@ -5,3 +5,4 @@ end
 
 require("radar.lsp.lsp-installer")
 require("radar.lsp.handlers").setup()
+require("radar.lsp.null-ls")

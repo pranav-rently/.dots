@@ -25,6 +25,12 @@ keymap("n", "<Down>", "<Nop>", opts)
 keymap("n", "<Left>", "<Nop>", opts)
 keymap("n", "<Right>", "<Nop>", opts)
 
+-- Resize with arrow keys
+keymap("n", "<C-Up>", ":resize +2<CR>", opts)
+keymap("n", "<C-Down>", ":resize -2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+
 -- Copying to clipboard
 keymap("n", "<leader>y", "\"+y", opts)
 keymap("v", "<leader>y", "\"+y", opts)
@@ -85,7 +91,7 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
--- Plugins keymaps
+-- Plugins keymaps --
 -- Telescope
 keymap("n", "<leader>df", "<cmd>lua require 'radar.telescope'.search_dotfiles()<cr>", opts)
 keymap("n", "<leader>ff", "<cmd>lua require 'radar.telescope'.project_files()<cr>", opts)
@@ -108,5 +114,3 @@ keymap("n", "<leader>u", ":UndotreeToggle<cr>", opts)
 -- Jumplist mutations
 -- nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 -- nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
-
--- keymap("n", "<leader><CR>", ":source $MYVIMRC<cr>", opts)

@@ -44,10 +44,14 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used in lots of plugins
+  use "kyazdani42/nvim-web-devicons"
+  use { "akinsho/bufferline.nvim", tag = "v2.*" }
+  use "nvim-lualine/lualine.nvim"
+  use "numToStr/Comment.nvim" -- Comments
+  use "windwp/nvim-autopairs" -- Autopairs integrated with treesitter
 
   use "tpope/vim-surround"
   use "tpope/vim-fugitive" -- Git wrapper around vim
-  use "tpope/vim-commentary" -- Make comments
 
   -- Colorschemes
   use("gruvbox-community/gruvbox")
@@ -74,14 +78,21 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- native neovim LSP
   use "williamboman/nvim-lsp-installer" -- simple language server installer
+  use "jose-elias-alvarez/null-ls.nvim" -- formatting and linting
 
   -- Snippets
   use "L3MON4D3/LuaSnip" -- snippet engine
   use "rafamadriz/friendly-snippets" -- prebuilt snippets to use
 
-  use "kyazdani42/nvim-web-devicons"
-  use { "akinsho/bufferline.nvim", tag = "v2.*" }
-  use "nvim-lualine/lualine.nvim"
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use "nvim-treesitter/playground"
+  use "p00f/nvim-ts-rainbow"
+
+  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
