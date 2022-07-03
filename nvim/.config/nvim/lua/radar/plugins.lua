@@ -42,106 +42,46 @@ packer.init {
 return packer.startup(function(use)
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
-  -- use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  use "kyazdani42/nvim-web-devicons"
-  -- use { "kyazdani42/nvim-tree.lua" }
-  use "akinsho/bufferline.nvim"
-  use "nvim-lualine/lualine.nvim"
-  use "norcalli/nvim-colorizer.lua"
-  -- use "tpope/vim-repeat"
-  use "mbbill/undotree"
-  -- use "tpope/vim-commentary"
-  -- use "preservim/nerdcommenter"
-  use "tpope/vim-fugitive"
+  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used in lots of plugins
+
   use "tpope/vim-surround"
-  use "tpope/vim-rails"
-  use "tpope/vim-endwise"
-  use "vimwiki/vimwiki"
-  use "tversteeg/registers.nvim"
-  use {
-    "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    ft = "markdown",
-  }
+  use "tpope/vim-fugitive" -- Git wrapper around vim
+  use "tpope/vim-commentary" -- Make comments
 
   -- Colorschemes
-  use 'gruvbox-community/gruvbox'
-  use "folke/tokyonight.nvim"
-  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
-  use "rose-pine/neovim"
+  use("gruvbox-community/gruvbox")
+  use("folke/tokyonight.nvim")
 
-  -- cmp plugins
-  use {
-    "hrsh7th/nvim-cmp",
-    -- commit = "dbc72290295cfc63075dab9ea635260d2b72f2e5",
-  }
-  use "hrsh7th/cmp-buffer" -- buffer completions
-  use "hrsh7th/cmp-path" -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-nvim-lua"
-  use "rcarriga/cmp-dap"
-  -- use {
-  --   "tzachar/cmp-tabnine",
-  --   config = function()
-  --     local tabnine = require "cmp_tabnine.config"
-  --     tabnine:setup {
-  --       max_lines = 1000,
-  --       max_num_results = 20,
-  --       sort = true,
-  --       run_on_every_keystroke = true,
-  --       snippet_placeholder = "..",
-  --       ignored_file_types = { -- default is not to ignore
-  --         -- uncomment to ignore in lua:
-  --         -- lua = true
-  --       },
-  --     }
-  --   end,
+  -- Gitsigns
+  use "lewis6991/gitsigns.nvim"
 
-  --   run = "./install.sh",
-  --   requires = "hrsh7th/nvim-cmp",
-  -- }
-
-  -- snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
-  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-
-  -- LSP
-  use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-  use "simrat39/symbols-outline.nvim"
-  use "github/copilot.vim"
+  -- Undotree
+  use "mbbill/undotree"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
-  use "tom-anders/telescope-vim-bookmarks.nvim"
-  use "nvim-telescope/telescope-media-files.nvim"
-  use "nvim-telescope/telescope-ui-select.nvim"
-  use "nvim-telescope/telescope-file-browser.nvim"
 
-  -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    -- run = ":TSUpdate",
-  }
-  use "nvim-treesitter/playground"
-  use "romgrk/nvim-treesitter-context"
+  -- Completion
+  use "hrsh7th/nvim-cmp" -- completion engine
+  use "hrsh7th/cmp-buffer" -- buffer completion
+  use "hrsh7th/cmp-path" -- path completion
+  use "hrsh7th/cmp-cmdline" -- path completion
+  use "saadparwaiz1/cmp_luasnip" -- snippet completion
+  use "hrsh7th/cmp-nvim-lua"
+  use "hrsh7th/cmp-nvim-lsp"
 
-  -- Git
-  use "lewis6991/gitsigns.nvim"
-  use "https://github.com/rhysd/conflict-marker.vim"
+  -- LSP
+  use "neovim/nvim-lspconfig" -- native neovim LSP
+  use "williamboman/nvim-lsp-installer" -- simple language server installer
 
-  -- DAP
-  use "mfussenegger/nvim-dap"
-  use "theHamsta/nvim-dap-virtual-text"
-  use "rcarriga/nvim-dap-ui"
-  use "Pocco81/DAPInstall.nvim"
+  -- Snippets
+  use "L3MON4D3/LuaSnip" -- snippet engine
+  use "rafamadriz/friendly-snippets" -- prebuilt snippets to use
+
+  use "kyazdani42/nvim-web-devicons"
+  use { "akinsho/bufferline.nvim", tag = "v2.*" }
+  use "nvim-lualine/lualine.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
@@ -149,4 +89,3 @@ return packer.startup(function(use)
     require("packer").sync()
   end
 end)
-

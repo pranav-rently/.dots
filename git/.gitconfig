@@ -28,7 +28,7 @@
 [difftool]
 	prompt = true
 [pull]
-	rebase = true
+	rebase = false
 [fetch]
 	prune = true
 [includeIf "gitdir:~/personal/"]
