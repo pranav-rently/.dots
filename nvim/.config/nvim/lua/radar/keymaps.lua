@@ -71,16 +71,16 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Move text up and down
-keymap("v", "<C-j>", ":m .+1<CR>==", opts)
-keymap("v", "<C-k>", ":m .-2<CR>==", opts)
+keymap("v", "<C-j>", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "<C-k>", ":m '>-2<CR>gv=gv", opts)
 keymap("v", "<leader>d", '"_d', opts)
 
 -- Visual Block --
 -- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<C-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<C-k>", ":move '<-2<CR>gv-gv", opts)
+keymap("x", "J", ":move '>+1<CR>gv=gv", opts)
+keymap("x", "K", ":move '<-2<CR>gv=gv", opts)
+keymap("x", "<C-j>", ":move '>+1<CR>gv=gv", opts)
+keymap("x", "<C-k>", ":move '<-2<CR>gv=gv", opts)
 keymap("x", "<leader>p", '"_dP', opts)
 
 -- Terminal --
@@ -103,13 +103,20 @@ keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
 keymap("n", "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", opts)
 
+-- Dap
+-- TODO: add more sensible keymaps for dap
+
 -- Git fugitive
-keymap("n", "<leader>gs", ":G<cr>", term_opts) -- for git status
+-- keymap("n", "<leader>gs", ":G<cr>", term_opts) -- for git status
+keymap("n", "<leader>gs", "<cmd>lua require 'neogit'.open()<cr>", opts) -- open neogit
 keymap("n", "<leader>gj", ":diffget //3<cr>", term_opts) -- git conflicts - right
 keymap("n", "<leader>gf", ":diffget //2<cr>", term_opts) -- git conflicts - left
 
 -- Undotree
 keymap("n", "<leader>u", ":UndotreeToggle<cr>", opts)
+
+-- Format
+keymap("n", "ff", ":Format<cr>", opts)
 
 -- Jumplist mutations
 -- nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
