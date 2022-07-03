@@ -79,6 +79,7 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- native neovim LSP
   use "williamboman/nvim-lsp-installer" -- simple language server installer
   use "jose-elias-alvarez/null-ls.nvim" -- formatting and linting
+  use "simrat39/rust-tools.nvim" -- extra rust tools
 
   -- Snippets
   use "L3MON4D3/LuaSnip" -- snippet engine
@@ -91,6 +92,11 @@ return packer.startup(function(use)
   }
   use "nvim-treesitter/playground"
   use "p00f/nvim-ts-rainbow"
+
+  -- Debugging
+  use "mfussenegger/nvim-dap"
+  use "rcarriga/nvim-dap-ui"
+  use "theHamsta/nvim-dap-virtual-text"
 
   use "JoosepAlviste/nvim-ts-context-commentstring"
 

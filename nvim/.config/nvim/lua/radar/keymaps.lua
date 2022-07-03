@@ -103,6 +103,9 @@ keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
 keymap("n", "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", opts)
 
+-- Dap
+-- TODO: add more sensible keymaps for dap
+
 -- Git fugitive
 keymap("n", "<leader>gs", ":G<cr>", term_opts) -- for git status
 keymap("n", "<leader>gj", ":diffget //3<cr>", term_opts) -- git conflicts - right
