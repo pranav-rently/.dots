@@ -12,3 +12,6 @@ source $ZDOTDIR/zshrc
 eval "$(rbenv init -)"
 
 alias luamake=/home/rently/builds/lua-language-server/3rd/luamake/luamake
+
+# bun completions
+[ -s "/home/rently/.bun/_bun" ] && source "/home/rently/.bun/_bun"

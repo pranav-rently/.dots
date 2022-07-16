@@ -98,6 +98,8 @@ keymap("n", "<leader>ff", "<cmd>lua require 'radar.telescope'.project_files()<cr
 keymap("n", "<leader>gc", "<cmd>lua require 'radar.telescope'.git_branches()<cr>", opts)
 keymap("n", "<leader>fs", "<cmd>lua require 'telescope.builtin'.grep_string({ search = vim.fn.input('Grep for > ') })<cr>", opts)
 
+keymap("n", "<C-p>", "<cmd>Telescope find_files<cr>", opts)
+
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
