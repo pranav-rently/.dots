@@ -15,6 +15,8 @@ export PATH="$PATH:/usr/local/go/bin"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export CLANGD_PATH=$HOME
+export BUN_INSTALL="/home/rently/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

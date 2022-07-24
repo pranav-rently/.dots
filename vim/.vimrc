@@ -84,6 +84,8 @@ let g:netrw_winsize = 25
 
 let mapleader = " "
 
+inoremap jk <ESC>
+
 " Disable arrow keys
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>

@@ -83,6 +83,8 @@ sethandler <C-v> i:ide
 " https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf
 let mapleader = "\<Space>"
 
+map jk <ESC>
+
 " These are leader-based alternative shortcuts for actions whose corresponding
 " idea shortcuts require hand-stretching combinations, function keys, Home or
 " Insert.
