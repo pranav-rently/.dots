@@ -6,34 +6,6 @@
 title: Alacritty
 
 # Colorscheme
-# # Colors (Solarized Dark)
-# colors:
-#   # Default colors
-#   primary:
-#     background: '0x002b36'
-#     foreground: '0x839496'
-#
-#   # Normal colors
-#   normal:
-#     black:   '0x073642'
-#     red:     '0xdc322f'
-#     green:   '0x859900'
-#     yellow:  '0xb58900'
-#     blue:    '0x268bd2'
-#     magenta: '0xd33682'
-#     cyan:    '0x2aa198'
-#     white:   '0xeee8d5'
-#
-#   # Bright colors
-#   bright:
-#     black:   '0x002b36'
-#     red:     '0xcb4b16'
-#     green:   '0x586e75'
-#     yellow:  '0x657b83'
-#     blue:    '0x839496'
-#     magenta: '0x6c71c4'
-#     cyan:    '0x93a1a1'
-#     white:   '0xfdf6e3'
 # # Colors (Tokyo Night)
 # # Source: https://github.com/zatchheems/tokyo-night-alacritty-theme
 # colors:
@@ -64,33 +36,33 @@ title: Alacritty
 #     cyan:    '0x0db9d7'
 #     white:   '0xacb0d0'
 # # Colors (One Dark)
-colors:
-  # Default colors
-  primary:
-    background: '0x1e2127'
-    foreground: '0xabb2bf'
-
-  # Normal colors
-  normal:
-    black:   '0x1e2127'
-    red:     '0xe06c75'
-    green:   '0x98c379'
-    yellow:  '0xd19a66'
-    blue:    '0x61afef'
-    magenta: '0xc678dd'
-    cyan:    '0x56b6c2'
-    white:   '0xabb2bf'
-
-  # Bright colors
-  bright:
-    black:   '0x5c6370'
-    red:     '0xe06c75'
-    green:   '0x98c379'
-    yellow:  '0xd19a66'
-    blue:    '0x61afef'
-    magenta: '0xc678dd'
-    cyan:    '0x56b6c2'
-    white:   '0xffffff'
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x1e2127'
+#     foreground: '0xabb2bf'
+#
+#   # Normal colors
+#   normal:
+#     black:   '0x1e2127'
+#     red:     '0xe06c75'
+#     green:   '0x98c379'
+#     yellow:  '0xd19a66'
+#     blue:    '0x61afef'
+#     magenta: '0xc678dd'
+#     cyan:    '0x56b6c2'
+#     white:   '0xabb2bf'
+#
+#   # Bright colors
+#   bright:
+#     black:   '0x5c6370'
+#     red:     '0xe06c75'
+#     green:   '0x98c379'
+#     yellow:  '0xd19a66'
+#     blue:    '0x61afef'
+#     magenta: '0xc678dd'
+#     cyan:    '0x56b6c2'
+#     white:   '0xffffff'
 # Colors (Base16 Default Dark)
 # colors:
 #   # Default colors
@@ -152,65 +124,39 @@ colors:
 #     magenta: '0xFFEE99'
 #     cyan:    '0x95E6CB'
 #     white:   '0xFFFFFF'
-# Colors (Gruvbox Dark)
-# colors:
-#   primary:
-#     # hard contrast background - '#1d2021'
-#     # soft contrast background - '#32302f'
-#     background:        &gruvbox_dark_bg '#1d2021'
-#     foreground:        '#ebdbb2'
-#     bright_foreground: '#fbf1c7'
-#     dim_foreground:    '#a89984'
-#   cursor:
-#     text:   CellBackground
-#     cursor: CellForeground
-#   vi_mode_cursor:
-#     text:   CellBackground
-#     cursor: CellForeground
-#   # search:
-#   #   matches:
-#   #     foreground: '#000000'
-#   #     background: '#ffffff'
-#   #   focused_match:
-#   #    foreground: CellBackground
-#   #    background: CellForeground
-#   #   bar:
-#   #     background: ''
-#   #     foreground: ''
-#   # line_indicator:
-#   #   foreground: None
-#   #   background: None
-#   selection:
-#     text:       CellBackground
-#     background: CellForeground
-#   bright:
-#     black:   '#928374'
-#     red:     '#fb4934'
-#     green:   '#b8bb26'
-#     yellow:  '#fabd2f'
-#     blue:    '#83a598'
-#     magenta: '#d3869b'
-#     cyan:    '#8ec07c'
-#     white:   '#ebdbb2'
-#   normal:
-#     black:   '#1d2021'
-#     red:     '#cc241d'
-#     green:   '#98971a'
-#     yellow:  '#d79921'
-#     blue:    '#458588'
-#     magenta: '#b16286'
-#     cyan:    '#689d6a'
-#     white:   '#a89984'
-#   dim:
-#     black:   '#32302f'
-#     red:     '#9d0006'
-#     green:   '#79740e'
-#     yellow:  '#b57614'
-#     blue:    '#076678'
-#     magenta: '#8f3f71'
-#     cyan:    '#427b58'
-#     white:   '#928374'
-  # indexed_colors: []
+# Colors (Oceanic Next)
+colors:
+  # Default colors
+  primary:
+    background: '#1b2b34'
+    foreground: '#d8dee9'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '#1b2b34'
+    cursor: '#ffffff'
+
+  # Normal colors
+  normal:
+    black:   '#343d46'
+    red:     '#EC5f67'
+    green:   '#99C794'
+    yellow:  '#FAC863'
+    blue:    '#6699cc'
+    magenta: '#c594c5'
+    cyan:    '#5fb3b3'
+    white:   '#d8dee9'
+
+  # Bright colors
+  bright:
+    black:   '#343d46'
+    red:     '#EC5f67'
+    green:   '#99C794'
+    yellow:  '#FAC863'
+    blue:    '#6699cc'
+    magenta: '#c594c5'
+    cyan:    '#5fb3b3'
+    white:   '#d8dee9'
 
 cursor:
   style:
@@ -218,20 +164,20 @@ cursor:
 
 font:
   normal:
-    family: Iosevka
+    family: Jetbrains Mono
     style: Regular
   bold:
-    family: Iosevka
+    family: Jetbrains Mono
     style: Bold
   italic:
-    family: Iosevka
+    family: Jetbrains Mono
     style: Italic
   bold_italic:
-    family: Iosevka
+    family: Jetbrains Mono
     style: Bold Italic
 
   # Point size
-  size: 15.5
+  size: 14
 
   offset:
     x: 0
