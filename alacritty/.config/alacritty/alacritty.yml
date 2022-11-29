@@ -6,35 +6,6 @@
 title: Alacritty
 
 # Colorscheme
-# # Colors (Tokyo Night)
-# # Source: https://github.com/zatchheems/tokyo-night-alacritty-theme
-# colors:
-#   # Default colors
-#   primary:
-#     background: '0x1a1b26'
-#     foreground: '0xa9b1d6'
-#
-#   # Normal colors
-#   normal:
-#     black:   '0x32344a'
-#     red:     '0xf7768e'
-#     green:   '0x9ece6a'
-#     yellow:  '0xe0af68'
-#     blue:    '0x7aa2f7'
-#     magenta: '0xad8ee6'
-#     cyan:    '0x449dab'
-#     white:   '0x787c99'
-#
-#   # Bright colors
-#   bright:
-#     black:   '0x444b6a'
-#     red:     '0xff7a93'
-#     green:   '0xb9f27c'
-#     yellow:  '0xff9e64'
-#     blue:    '0x7da6ff'
-#     magenta: '0xbb9af7'
-#     cyan:    '0x0db9d7'
-#     white:   '0xacb0d0'
 # # Colors (One Dark)
 # colors:
 #   # Default colors
@@ -63,100 +34,76 @@ title: Alacritty
 #     magenta: '0xc678dd'
 #     cyan:    '0x56b6c2'
 #     white:   '0xffffff'
-# Colors (Base16 Default Dark)
+# Colors (Oceanic Next)
 # colors:
 #   # Default colors
 #   primary:
-#     background: '0x181818'
-#     foreground: '0xd8d8d8'
+#     background: '#1b2b34'
+#     foreground: '#d8dee9'
 #
 #   # Colors the cursor will use if `custom_cursor_colors` is true
 #   cursor:
-#     text: '0xd8d8d8'
-#     cursor: '0xd8d8d8'
+#     text: '#1b2b34'
+#     cursor: '#ffffff'
 #
 #   # Normal colors
 #   normal:
-#     black:   '0x181818'
-#     red:     '0xab4642'
-#     green:   '0xa1b56c'
-#     yellow:  '0xf7ca88'
-#     blue:    '0x7cafc2'
-#     magenta: '0xba8baf'
-#     cyan:    '0x86c1b9'
-#     white:   '0xd8d8d8'
+#     black:   '#343d46'
+#     red:     '#EC5f67'
+#     green:   '#99C794'
+#     yellow:  '#FAC863'
+#     blue:    '#6699cc'
+#     magenta: '#c594c5'
+#     cyan:    '#5fb3b3'
+#     white:   '#d8dee9'
 #
 #   # Bright colors
 #   bright:
-#     black:   '0x585858'
-#     red:     '0xab4642'
-#     green:   '0xa1b56c'
-#     yellow:  '0xf7ca88'
-#     blue:    '0x7cafc2'
-#     magenta: '0xba8baf'
-#     cyan:    '0x86c1b9'
-#     white:   '0xf8f8f8'
-# Colors (Ayu Dark)
-# colors:
-#   # Default colors
-#   primary:
-#     background: '0x0A0E14'
-#     foreground: '0xB3B1AD'
-#
-#   # Normal colors
-#   normal:
-#     black:   '0x01060E'
-#     red:     '0xEA6C73'
-#     green:   '0x91B362'
-#     yellow:  '0xF9AF4F'
-#     blue:    '0x53BDFA'
-#     magenta: '0xFAE994'
-#     cyan:    '0x90E1C6'
-#     white:   '0xC7C7C7'
-#
-#   # Bright colors
-#   bright:
-#     black:   '0x686868'
-#     red:     '0xF07178'
-#     green:   '0xC2D94C'
-#     yellow:  '0xFFB454'
-#     blue:    '0x59C2FF'
-#     magenta: '0xFFEE99'
-#     cyan:    '0x95E6CB'
-#     white:   '0xFFFFFF'
-# Colors (Oceanic Next)
+#     black:   '#343d46'
+#     red:     '#EC5f67'
+#     green:   '#99C794'
+#     yellow:  '#FAC863'
+#     blue:    '#6699cc'
+#     magenta: '#c594c5'
+#     cyan:    '#5fb3b3'
+#     white:   '#d8dee9'
+# Colors (catppuccin)
 colors:
   # Default colors
   primary:
-    background: '#1b2b34'
-    foreground: '#d8dee9'
+    background: '0x1E1D2F'
+    foreground: '0xD9E0EE'
 
-  # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '#1b2b34'
-    cursor: '#ffffff'
+    text: '0x1E1D2F'
+    cursor: '0xF5E0DC'
 
   # Normal colors
   normal:
-    black:   '#343d46'
-    red:     '#EC5f67'
-    green:   '#99C794'
-    yellow:  '#FAC863'
-    blue:    '#6699cc'
-    magenta: '#c594c5'
-    cyan:    '#5fb3b3'
-    white:   '#d8dee9'
+    black:   '0x6E6C7E'
+    red:     '0xF28FAD'
+    green:   '0xABE9B3'
+    yellow:  '0xFAE3B0'
+    blue:    '0x96CDFB'
+    magenta: '0xF5C2E7'
+    cyan:    '0x89DCEB'
+    white:   '0xD9E0EE'
 
   # Bright colors
   bright:
-    black:   '#343d46'
-    red:     '#EC5f67'
-    green:   '#99C794'
-    yellow:  '#FAC863'
-    blue:    '#6699cc'
-    magenta: '#c594c5'
-    cyan:    '#5fb3b3'
-    white:   '#d8dee9'
+    black:   '0x988BA2'
+    red:     '0xF28FAD'
+    green:   '0xABE9B3'
+    yellow:  '0xFAE3B0'
+    blue:    '0x96CDFB'
+    magenta: '0xF5C2E7'
+    cyan:    '0x89DCEB'
+    white:   '0xD9E0EE'
+
+  indexed_colors:
+    - { index: 16, color: '0xF8BD96' }
+    - { index: 17, color: '0xF5E0DC' }
+
 
 cursor:
   style:
