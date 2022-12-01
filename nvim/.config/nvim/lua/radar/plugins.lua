@@ -57,6 +57,9 @@ return packer.startup(function(use)
   use("gruvbox-community/gruvbox")
   use("folke/tokyonight.nvim")
 
+  -- Toggleterm
+  use "akinsho/toggleterm.nvim"
+
   -- Gitsigns
   use "lewis6991/gitsigns.nvim"
 
