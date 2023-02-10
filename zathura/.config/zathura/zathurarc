@@ -1,0 +1,9 @@
+set selection-clipboard clipboard
+
+map R rotate
+map r reload
+map u scroll half-up
+map d scroll half-down
+
+map <C-i> zoom in
+map <C-o> zoom out
