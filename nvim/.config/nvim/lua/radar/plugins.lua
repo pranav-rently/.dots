@@ -82,6 +82,7 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- native neovim LSP
   --[[ use "williamboman/nvim-lsp-installer" -- simple language server installer ]]
   use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
   use "jose-elias-alvarez/null-ls.nvim" -- formatting and linting
   use "simrat39/rust-tools.nvim" -- extra rust tools
 
@@ -108,13 +109,6 @@ return packer.startup(function(use)
 
   -- Personal Wiki
   use "vimwiki/vimwiki"
-
-  -- Markdown previewer
-  -- install without yarn or npm
-  --[[ use({ ]]
-  --[[   "iamcco/markdown-preview.nvim", ]]
-  --[[   run = function() vim.fn["mkdp#util#install"]() end, ]]
-  --[[ }) ]]
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
