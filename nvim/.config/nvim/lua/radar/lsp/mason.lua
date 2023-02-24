@@ -10,6 +10,7 @@ local servers = {
   "gopls",
   "rust_analyzer",
   "solargraph",
+  "tailwindcss",
 }
 
 local settings = {
