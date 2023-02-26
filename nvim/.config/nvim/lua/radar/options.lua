@@ -38,6 +38,8 @@ vim.opt.list = true
 vim.opt.listchars = { tab = '» ', extends = '›', precedes = '‹', nbsp = '␣', trail = '·', eol = '↵' }
 vim.opt.shortmess:append "c"
 vim.opt.colorcolumn = { "80", "120" }
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 
