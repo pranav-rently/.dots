@@ -51,7 +51,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
-Plug '9mm/vim-closer'
 Plug 'vimwiki/vimwiki'
 
 " Highlighted yank

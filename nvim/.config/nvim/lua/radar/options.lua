@@ -39,7 +39,7 @@ vim.opt.listchars = { tab = '» ', extends = '›', precedes = '‹', nbsp = '�
 vim.opt.shortmess:append "c"
 vim.opt.colorcolumn = { "80", "120" }
 vim.opt.spelllang = "en_us"
-vim.opt.spell = true
+vim.opt.spell = false
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 
