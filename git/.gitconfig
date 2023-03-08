@@ -2,7 +2,7 @@
 	name = Pranav RK
 	email = pranav.r@rently.com
 [core]
-	editor = vim
+	editor = nvim
 	diff = auto
 	status = auto
 	branch = auto
