@@ -104,6 +104,7 @@ keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
 keymap("n", "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", opts)
+keymap("n", "<leader>dd", "<cmd>Telescope diagnostics<cr>", opts)
 
 -- Dap
 -- TODO: add more sensible keymaps for dap
