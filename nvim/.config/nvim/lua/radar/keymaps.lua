@@ -25,6 +25,11 @@ keymap("n", "<Down>", "<Nop>", opts)
 keymap("n", "<Left>", "<Nop>", opts)
 keymap("n", "<Right>", "<Nop>", opts)
 
+
+-- Navigation through Quick fix list
+keymap("n", "<C-j", ":cnext<CR>", opts)
+keymap("n", "<C-k", ":cprev<CR>", opts)
+
 -- Resize with arrow keys
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)

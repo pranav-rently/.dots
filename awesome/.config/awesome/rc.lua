@@ -599,8 +599,9 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- {{{ Autorun programs
 autorun = true
 autorunApps = {
-    "nm-applet",
     "flameshot",
+    "blueman-applet",
+    "nm-applet",
     "xfce4-clipman",
     "xfce4-power-manager",
 }
@@ -615,5 +616,5 @@ end
 awful.spawn.with_shell("compton &")
 
 -- feh to set wallpaper
-awful.spawn.with_shell("feh --bg-fill --randomize ~/Pictures/wallpapers/* &")
+awful.spawn.with_shell("nitrogen --restore")
 -- }}}
