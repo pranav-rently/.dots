@@ -49,8 +49,12 @@ for _, server in pairs(servers) do
 
 	local require_ok, conf_opts = pcall(require, "radar.lsp.settings." .. server)
 	if require_ok then
-		opts = vim.tbl_deep_extend("force", conf_opts, opts)
+    opts = vim.tbl_deep_extend("force", conf_opts, opts)
 	end
 
 	lspconfig[server].setup(opts)
 end
+
+-- Rust Analyzer with Rust tools options
+local tools = require("radar.lsp.settings.rust_analyzer")
+require("rust-tools").setup(tools)
