@@ -10,7 +10,14 @@ dap.adapters.delve = {
   executable = {
     command = 'dlv',
     args = {'dap', '-l', '127.0.0.1:${port}'},
-  }
+  },
+  {
+    type = "delve",
+    name = "Debug test", -- configuration for debugging test files
+    request = "launch",
+    mode = "test",
+    program = "${file}"
+  },
 }
 
 dap.configurations.go = {
@@ -25,15 +32,15 @@ dap.configurations.go = {
 }
 
 -- Python
-dap.adapters.python3 = {
+dap.adapters.python = {
   type = 'executable',
   command = os.getenv('HOME') .. '/.virtualenvs/debugpy/bin/python3',
   args = { '-m', 'debugpy.adapter' },
 }
 
-dap.configurations.python3 = {
+dap.configurations.python = {
   {
-    type = 'python3',
+    type = 'python',
     request = 'launch',
     name = "Launch file",
     program = "${file}",
