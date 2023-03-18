@@ -112,7 +112,6 @@ keymap("n", "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", opts)
 keymap("n", "<leader>dd", "<cmd>Telescope diagnostics<cr>", opts)
 
 -- Dap
--- TODO: add more sensible keymaps for dap
 keymap("n", "<F5>", "<cmd>lua require'dap'.continue()<CR>", opts)
 keymap("n", "<F10>", "<cmd>lua require'dap'.step_over()<CR>", opts)
 keymap("n", "<F11>", "<cmd>lua require'dap'.step_into()<CR>", opts)

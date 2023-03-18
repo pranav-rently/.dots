@@ -13,6 +13,7 @@ require "radar.treesitter"
 require "radar.comment"
 require "radar.autopairs"
 require "radar.dap"
+require "radar.dapui"
 require "radar.neogit"
 --[[ require "radar.nvim-tree" ]]
 
