@@ -17,5 +17,5 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 
 # Launch bspwm
-# exec bspwm
+# exec i3
 # xinput set-prop "DELL0A20:00 06CB:CE65 Touchpad" "libinput Tapping Enabled" 1
