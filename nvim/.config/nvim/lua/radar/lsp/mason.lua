@@ -12,6 +12,7 @@ local servers = {
   "rust_analyzer",
   "solargraph",
   "tailwindcss",
+  "dockerls",
 }
 
 local settings = {
