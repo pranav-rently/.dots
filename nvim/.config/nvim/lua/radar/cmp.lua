@@ -18,11 +18,11 @@ end
 --   פּ ﯟ   some other good icons
 local kind_icons = {
   Text = "",
-  Method = "m",
+  Method = "󰆧",
   Function = "",
-  Constructor = "",
+  Constructor = "",
   Field = "",
-  Variable = "",
+  Variable = "󰀫",
   Class = "",
   Interface = "",
   Module = "",
@@ -37,7 +37,7 @@ local kind_icons = {
   Reference = "",
   Folder = "",
   EnumMember = "",
-  Constant = "",
+  Constant = "󰏿",
   Struct = "",
   Event = "",
   Operator = "",
@@ -53,7 +53,7 @@ cmp.setup {
   },
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
-		["<C-j>"] = cmp.mapping.select_next_item(),
+    ["<C-j>"] = cmp.mapping.select_next_item(),
     ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
     ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
     ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
