@@ -15,7 +15,7 @@ end
 config.color_scheme = 'Catppuccin Macchiato'
 
 config.font = wezterm.font 'IosevkaTerm Nerd Font'
-config.font_size = 13.5
+config.font_size = 14.8
 
 config.tab_bar_at_bottom = true
 
