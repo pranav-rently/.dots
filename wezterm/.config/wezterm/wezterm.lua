@@ -21,7 +21,7 @@ config.use_fancy_tab_bar = false
 
 config.tab_bar_at_bottom = true
 
-config.window_background_image = '/home/rently/Pictures/wallpapers/zen.png'
+--[[ config.window_background_image = '/home/rently/Pictures/wallpapers/zen.png' ]]
 config.window_background_image_hsb = {
   -- Darken the background image by reducing it to 1/3rd
   brightness = 0.1,
