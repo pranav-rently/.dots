@@ -15,7 +15,7 @@ end
 config.color_scheme = 'Catppuccin Macchiato'
 
 config.font = wezterm.font 'IosevkaTerm Nerd Font'
-config.font_size = 18
+config.font_size = 17.5
 
 config.use_fancy_tab_bar = false
 
@@ -34,6 +34,18 @@ config.window_background_image_hsb = {
   saturation = 1.0,
 }
 
+config.keys = {
+  {
+    key = '"',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+  },
+  {
+    key = '%',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+  }
+}
 
 -- and finally, return the configuration to wezterm
 return config

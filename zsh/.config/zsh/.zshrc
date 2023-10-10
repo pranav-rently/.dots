@@ -15,3 +15,6 @@ alias luamake=/home/rently/builds/lua-language-server/3rd/luamake/luamake
 . "$HOME/.asdf/completions/asdf.bash"
 
 [ -f "/home/rently/.ghcup/env" ] && source "/home/rently/.ghcup/env" # ghcup-env
+
+# opam configuration
+# bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"
