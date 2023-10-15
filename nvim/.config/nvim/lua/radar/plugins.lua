@@ -51,7 +51,7 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs" -- Autopairs integrated with treesitter
 
   use "tpope/vim-fugitive" -- Git wrapper around vim
-  use "TimUntersberger/neogit"
+  --[[ use "TimUntersberger/neogit" ]]
 
   -- Colorschemes
   use("gruvbox-community/gruvbox")
