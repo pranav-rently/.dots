@@ -14,9 +14,9 @@ end
 
 config.color_scheme = 'Catppuccin Macchiato'
 
-config.font = wezterm.font 'Caskaydia Cove Nerd Font'
+--[[ config.font = wezterm.font 'Caskaydia Cove Nerd Font' ]]
 config.font = wezterm.font 'IosevkaTerm Nerd Font'
-config.font_size = 17.5
+config.font_size = 18
 
 config.use_fancy_tab_bar = false
 

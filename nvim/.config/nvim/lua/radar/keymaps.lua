@@ -90,7 +90,7 @@ keymap("x", "<leader>p", '"_dP', opts)
 
 -- Terminal --
 -- Better terminal navigation
-keymap("t", "<Esc>", "<C-\\><C-n>", term_opts)
+keymap("t", "jk", "<C-\\><C-n>", term_opts)
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
@@ -101,7 +101,8 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("n", "<leader>df", "<cmd>lua require 'radar.telescope'.search_dotfiles()<cr>", opts)
 keymap("n", "<leader>ff", "<cmd>lua require 'radar.telescope'.project_files()<cr>", opts)
 keymap("n", "<leader>gc", "<cmd>lua require 'radar.telescope'.git_branches()<cr>", opts)
-keymap("n", "<leader>fs", "<cmd>lua require 'telescope.builtin'.grep_string({ search = vim.fn.input('Grep for > ') })<cr>", opts)
+keymap("n", "<leader>fs",
+  "<cmd>lua require 'telescope.builtin'.grep_string({ search = vim.fn.input('Grep for > ') })<cr>", opts)
 
 keymap("n", "<C-p>", "<cmd>Telescope find_files<cr>", opts)
 
@@ -123,8 +124,8 @@ keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.open()<CR>", opts)
 keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<CR>", opts)
 
 -- Git fugitive
--- keymap("n", "<leader>gs", ":G<cr>", term_opts) -- for git status
-keymap("n", "<leader>gs", "<cmd>lua require 'neogit'.open()<cr>", opts) -- open neogit
+keymap("n", "<leader>gs", ":G<cr>", term_opts)           -- for git status
+-- keymap("n", "<leader>gs", "<cmd>lua require 'neogit'.open()<cr>", opts) -- open neogit
 keymap("n", "<leader>gj", ":diffget //3<cr>", term_opts) -- git conflicts - right
 keymap("n", "<leader>gf", ":diffget //2<cr>", term_opts) -- git conflicts - left
 
