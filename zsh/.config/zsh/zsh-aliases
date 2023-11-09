@@ -39,3 +39,4 @@ alias free='free -m'                      # show sizes in MB
 alias m="git checkout master"
 alias mm="git checkout main"
 
+alias lg="lazygit"
