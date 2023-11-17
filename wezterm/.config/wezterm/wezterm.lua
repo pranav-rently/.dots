@@ -15,7 +15,7 @@ end
 config.color_scheme = 'Catppuccin Macchiato'
 
 config.font = wezterm.font 'IosevkaTerm Nerd Font'
-config.font_size = 18
+config.font_size = 16
 
 config.use_fancy_tab_bar = false
 
@@ -34,6 +34,8 @@ config.tab_bar_at_bottom = true
 --[[   saturation = 1.0, ]]
 --[[ } ]]
 
+config.hide_tab_bar_if_only_one_tab = true
+
 config.scrollback_lines = 10000
 
 -- Show which key table is active in the status area
@@ -45,40 +47,40 @@ wezterm.on('update-right-status', function(window, pane)
   window:set_right_status(name or '')
 end)
 
-config.leader = { key = "Space", mods = "CTRL", timeout_milliseconds = 1000 }
+--[[ config.leader = { key = "Space", mods = "CTRL", timeout_milliseconds = 1000 } ]]
 config.keys = {
   -- Resize panes
-  {
-    key = 'r',
-    mods = 'LEADER',
-    action = act.ActivateKeyTable {
-      name = 'resize_pane',
-      one_shot = false,
-    },
-  },
-
-  -- Activate panes
-  {
-    key = "h",
-    mods = "LEADER",
-    action = act.ActivatePaneDirection "Left",
-  },
-  {
-    key = "k",
-    mods = "LEADER",
-    action = act.ActivatePaneDirection "Up",
-  },
-  {
-    key = "j",
-    mods = "LEADER",
-    action = act.ActivatePaneDirection "Down",
-  },
-  {
-    key = "l",
-    mods = "LEADER",
-    action = act.ActivatePaneDirection "Right",
-  },
-
+  --[[ { ]]
+  --[[   key = 'r', ]]
+  --[[   mods = 'LEADER', ]]
+  --[[   action = act.ActivateKeyTable { ]]
+  --[[     name = 'resize_pane', ]]
+  --[[     one_shot = false, ]]
+  --[[   }, ]]
+  --[[ }, ]]
+  --[[]]
+  --[[ -- Activate panes ]]
+  --[[ { ]]
+  --[[   key = "h", ]]
+  --[[   mods = "LEADER", ]]
+  --[[   action = act.ActivatePaneDirection "Left", ]]
+  --[[ }, ]]
+  --[[ { ]]
+  --[[   key = "k", ]]
+  --[[   mods = "LEADER", ]]
+  --[[   action = act.ActivatePaneDirection "Up", ]]
+  --[[ }, ]]
+  --[[ { ]]
+  --[[   key = "j", ]]
+  --[[   mods = "LEADER", ]]
+  --[[   action = act.ActivatePaneDirection "Down", ]]
+  --[[ }, ]]
+  --[[ { ]]
+  --[[   key = "l", ]]
+  --[[   mods = "LEADER", ]]
+  --[[   action = act.ActivatePaneDirection "Right", ]]
+  --[[ }, ]]
+  --[[]]
   -- Split panes
   {
     key = '"',
