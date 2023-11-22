@@ -12,10 +12,10 @@ if wezterm.config_builder then
 end
 
 
-config.color_scheme = 'Catppuccin Macchiato'
+config.color_scheme = 'Catppuccin Mocha'
 
 config.font = wezterm.font 'IosevkaTerm Nerd Font'
-config.font_size = 16
+config.font_size = 16.5
 
 config.use_fancy_tab_bar = false
 

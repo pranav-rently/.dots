@@ -39,9 +39,15 @@ M.search_dotfiles = function()
 end
 
 M.project_files = function()
-  local opts = {} -- define here if you want to define something
-  local ok = pcall(builtin.git_files, opts)
-  if not ok then builtin.find_files(opts) end
+  local opts = { hidden = true } -- define here if you want to define something
+  local cwd = vim.fn.getcwd()
+  local is_inside_work_tree = vim.fn.system("git rev-parse --is-inside-work-tree")
+
+  if is_inside_work_tree then
+    builtin.git_files(opts)
+  else
+    builtin.find_files(opts)
+  end
 end
 
 M.git_branches = function()
