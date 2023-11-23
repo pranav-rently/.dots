@@ -13,7 +13,7 @@ require "radar.treesitter"
 require "radar.comment"
 require "radar.autopairs"
 require "radar.dap"
-require "radar.toggleterm"
+require "radar.oil"
 
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd

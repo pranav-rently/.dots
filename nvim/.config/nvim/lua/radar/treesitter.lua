@@ -5,11 +5,11 @@ end
 
 configs.setup {
   ensure_installed = "all",
-  sync_install = false, --install languages synchronously (only applied to `ensure_installed`)
+  sync_install = false,    --install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "" }, -- List of parsers to ignore installing
   highlight = {
-    enable = true, -- false will disable the whole extension
-    disable = { "" }, -- list of language that will be disabled
+    enable = true,         -- false will disable the whole extension
+    disable = { "" },      -- list of language that will be disabled
     additional_vim_regex_highlighting = true,
 
   },
@@ -25,10 +25,10 @@ configs.setup {
   playground = {
     enable = true,
   },
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
-  },
+  --[[ context_commentstring = { ]]
+  --[[   enable = true, ]]
+  --[[   enable_autocmd = false, ]]
+  --[[ }, ]]
   autopairs = {
     enable = true,
   },
