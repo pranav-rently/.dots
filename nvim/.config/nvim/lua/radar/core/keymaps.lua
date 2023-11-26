@@ -93,14 +93,6 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
--- Plugins keymaps --
--- Telescope
--- keymap("n", "<leader>df", "<cmd>lua require 'radar.telescope'.search_dotfiles()<cr>", opts)
--- keymap("n", "<leader>ff", "<cmd>lua require 'radar.telescope'.project_files()<cr>", opts)
--- keymap("n", "<leader>gc", "<cmd>lua require 'radar.telescope'.git_branches()<cr>", opts)
--- keymap("n", "<C-p>", "<cmd>Telescope find_files<cr>", opts)
--- 
-
 -- Dap
 -- keymap("n", "<F5>", "<cmd>lua require'dap'.continue()<CR>", opts)
 -- keymap("n", "<F10>", "<cmd>lua require'dap'.step_over()<CR>", opts)
@@ -113,7 +105,7 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<CR>", opts)
 
 -- Format
-keymap("n", "ff", ":Format<cr>", opts)
+-- keymap("n", "ff", ":Format<cr>", opts)
 
 -- Jumplist mutations
 -- nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'

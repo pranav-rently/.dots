@@ -3,6 +3,7 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects",
@@ -10,35 +11,53 @@ return {
     },
     config = function()
       require("nvim-treesitter.configs").setup({
-        ensure_installed = "all",
+        ensure_installed = {
+          "astro",
+          "bash",
+          "c",
+          "c_sharp",
+          "cpp",
+          "css",
+          "dockerfile",
+          "go",
+          "graphql",
+          "haskell",
+          "html",
+          "javascript",
+          "json",
+          "llvm",
+          "lua",
+          "nix",
+          "ocaml",
+          "ocaml_interface",
+          "python",
+          "ruby",
+          "rust",
+          "sql",
+          "svelte",
+          "templ",
+          "toml",
+          "tsx",
+          "typescript",
+          "yaml",
+          "zig",
+        },
         highlight = { enable = true, additional_vim_regex_highlighting = true },
         indent = { enable = true },
         autotag = { enable = true },
         incremental_selection = {
           enable = true,
           keymaps = {
-            init_selection = "<C-space>",
-            node_incremental = "<C-space>",
+            init_selection = "<C-a>",
+            node_incremental = "<C-a>",
             scope_incremental = false,
             node_decremental = "<bs>",
-          },
-        },
-        textobjects = {
-          move = {
-            enable = true,
-            goto_next_start = { ["]f"] = "@function.outer", ["]c"] = "@class.outer" },
-            goto_next_end = { ["]F"] = "@function.outer", ["]C"] = "@class.outer" },
-            goto_previous_start = { ["[f"] = "@function.outer", ["[c"] = "@class.outer" },
-            goto_previous_end = { ["[F"] = "@function.outer", ["[C"] = "@class.outer" },
           },
         },
         query_linter = {
           enable = true,
           use_virtual_text = true,
           lint_events = { "BufWrite", "CursorHold" },
-        },
-        autopairs = {
-          enable = true,
         },
       })
     end,

@@ -11,7 +11,10 @@ return {
 
     telescope.setup({
       defaults = {
-        path_display = { "truncate " },
+        prompt_prefix = " ",
+        selection_caret = " ",
+        path_display = { "smart" },
+        file_ignore_patterns = { ".git/", "node_modules/" },
         mappings = {
           i = {
             ["<Esc>"] = actions.close,
@@ -31,7 +34,6 @@ return {
     local opts = { noremap = true, silent = true }
     local keymap = vim.keymap.set
 
-    keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
     keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", opts)
     keymap("n", "<leader>fs", "<cmd>Telescope grep_string({ search = vim.fn.input('Grep for > ')})<cr>", opts)
     keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
@@ -40,4 +42,51 @@ return {
     keymap("n", "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", opts)
     keymap("n", "<leader>dd", "<cmd>Telescope diagnostics<cr>", opts)
   end,
+  keys = {
+    {
+      "<leader>df",
+      function()
+        local builtin = require("telescope.builtin")
+        builtin.find_files({
+          prompt_title = "< Dotfiles >",
+          cwd = "$HOME/.dots/",
+          hidden = true,
+        })
+      end,
+    },
+    {
+      "<leader>ff",
+      function()
+        local builtin = require("telescope.builtin")
+        builtin.find_files({
+          prompt_title = "< Project files >",
+          cwd = "",
+          hidden = true,
+        })
+      end,
+    },
+    {
+      "<leader>gf",
+      function()
+        local builtin = require("telescope.builtin")
+        builtin.git_files({
+          prompt_title = "< Git files >",
+          hidden = true,
+        })
+      end,
+    },
+    {
+      "<leader>gc",
+      function()
+        local builtin = require("telescope.builtin")
+        local actions = require("telescope.actions")
+        builtin.git_branches({
+          -- attach_mappings = function(_, map)
+          --   map("i", "<C-d>", actions.git_delete_branch)
+          --   map("i", "<C-d>", actions.git_delete_branch)
+          -- end,
+        })
+      end,
+    },
+  },
 }
