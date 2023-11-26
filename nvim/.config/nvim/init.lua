@@ -4,4 +4,3 @@ end
 
 require("radar.lazy")
 require("radar.core")
-

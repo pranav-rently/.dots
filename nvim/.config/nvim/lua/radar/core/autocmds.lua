@@ -16,10 +16,10 @@ autocmd('TextYankPost', {
 })
 
 -- Format while saving
-autocmd('BufWritePre', {
-  --[[ group = yank_group, ]]
-  pattern = '*',
-  callback = function()
-    vim.lsp.buf.format()
-  end
-})
+-- autocmd('BufWritePre', {
+--   --[[ group = yank_group, ]]
+--   pattern = '*',
+--   callback = function()
+--     vim.lsp.buf.format()
+--   end
+-- })

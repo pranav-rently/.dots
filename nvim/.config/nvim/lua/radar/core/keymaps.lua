@@ -104,9 +104,6 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.open()<CR>", opts)
 -- keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<CR>", opts)
 
--- Format
--- keymap("n", "ff", ":Format<cr>", opts)
-
 -- Jumplist mutations
 -- nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 -- nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
