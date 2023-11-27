@@ -151,22 +151,42 @@ return {
     })
 
     -- rust analyzer
-    lspconfig["rust_analyzer"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-      cmd = { os.getenv("HOME") .. "/.local/bin/rust-analyzer" },
-      settings = {
-        ["rust-analyzer"] = {
-          lens = {
-            enable = true,
-          },
-          checkOnSave = {
-            command = "clippy",
+    -- lspconfig["rust_analyzer"].setup({
+    --   capabilities = capabilities,
+    --   on_attach = on_attach,
+    --   cmd = { os.getenv("HOME") .. "/.local/bin/rust-analyzer" },
+    --   settings = {
+    --     ["rust-analyzer"] = {
+    --       diagnostics = {
+    --         enable = true,
+    --       },
+    --       lens = {
+    --         enable = true,
+    --       },
+    --       checkOnSave = {
+    --         command = "clippy",
+    --       },
+    --     },
+    --   },
+    -- })
+    require("rust-tools").setup({
+      server = {
+        on_attach = on_attach,
+        cmd = { os.getenv("HOME") .. "/.local/bin/rust-analyzer" },
+        settings = {
+          ["rust-analyzer"] = {
+            diagnostics = {
+              enable = true,
+            },
+            lens = {
+              enable = true,
+            },
+            checkOnSave = {
+              command = "clippy",
+            },
           },
         },
       },
-    })
-    require("rust-tools").setup({
       tools = {
         on_initialized = function()
           vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter", "CursorHold", "InsertLeave" }, {
