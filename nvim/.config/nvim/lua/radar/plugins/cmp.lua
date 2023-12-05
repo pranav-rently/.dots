@@ -31,11 +31,11 @@ return {
         ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
         ["<C-b>"] = cmp.mapping.scroll_docs(-2),
         ["<C-f>"] = cmp.mapping.scroll_docs(2),
-        ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+        ["<C-Space>"] = cmp.mapping.complete(),
         ["<C-e>"] = cmp.mapping.abort(), -- close completion window
         -- Accept currently selected item. If none selected, `select` first item.
         -- Set `select` to `false` to only confirm explicitly selected items.
-        ["<CR>"] = cmp.mapping.confirm({ select = false }),
+        ["<CR>"] = cmp.mapping.confirm({ select = true }),
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_next_item()
@@ -49,8 +49,8 @@ return {
             fallback()
           end
         end, {
-            "i",
-            "s",
+          "i",
+          "s",
         }),
         ["<S-Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
@@ -61,8 +61,8 @@ return {
             fallback()
           end
         end, {
-            "i",
-            "s",
+          "i",
+          "s",
         }),
       }),
       -- sources for autocompletion
