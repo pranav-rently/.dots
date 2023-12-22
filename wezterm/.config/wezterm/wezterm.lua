@@ -13,8 +13,8 @@ end
 
 config.color_scheme = "Catppuccin Mocha"
 
-config.font = wezterm.font("FiraCode Nerd Font")
-config.font_size = 16.0
+config.font = wezterm.font("IosevkaTerm nerd font")
+config.font_size = 18.0
 
 config.use_fancy_tab_bar = false
 
