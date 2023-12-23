@@ -4,6 +4,8 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+default_border none
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -24,10 +26,17 @@ include /etc/sway/config-vars.d/*
 
 gaps inner 2
 
+# set wallpaper using waypaper
+exec waypaper --restore
+
+# window rules
+for_window [app_id="gnome-calculator"] floating enable
+for_window [app_id="waypaper"] floating enable
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:
 #
