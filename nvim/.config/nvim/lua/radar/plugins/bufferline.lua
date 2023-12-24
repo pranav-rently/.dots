@@ -10,7 +10,7 @@ return {
       options = {
         close_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
         right_mouse_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
-        separator_style = "slant", -- | "thick" | "thin" | { 'any', 'any' },
+        separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' },
       },
     }
   end,

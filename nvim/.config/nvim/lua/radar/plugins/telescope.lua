@@ -35,7 +35,13 @@ return {
     local keymap = vim.keymap.set
 
     keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", opts)
-    keymap("n", "<leader>fs", "<cmd>Telescope grep_string({ search = vim.fn.input('Grep for > ')})<cr>", opts)
+    -- keymap("n", "<leader>fs", builtin.grep_string({ search = vim.fn.input("Grep for > ") }), opts)
+    keymap(
+      "n",
+      "<leader>fs",
+      "<cmd>lua require('telescope.builtin').grep_string({ search = vim.fn.input('Grep for > ' )}) <cr>",
+      opts
+    )
     keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
     keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
     keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
