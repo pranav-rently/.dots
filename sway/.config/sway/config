@@ -32,6 +32,7 @@ exec waypaper --restore
 # window rules
 for_window [app_id="gnome-calculator"] floating enable
 for_window [app_id="waypaper"] floating enable
+for_window [app_id="pavucontrol"] floating enable
 
 ### Output configuration
 #
