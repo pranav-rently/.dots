@@ -16,15 +16,13 @@ config.color_scheme = "Catppuccin Mocha"
 config.font = wezterm.font("IosevkaTerm Nerd Font")
 config.font_size = 18.0
 
-config.window_background_opacity = 0.95
+-- config.window_background_opacity = 0.95
 
 config.warn_about_missing_glyphs = false
 
 config.use_fancy_tab_bar = false
 
 config.tab_bar_at_bottom = true
-
-config.window_background_opacity = 0.95
 
 config.hide_tab_bar_if_only_one_tab = true
 
