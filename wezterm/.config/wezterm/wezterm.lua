@@ -16,6 +16,8 @@ config.color_scheme = "Catppuccin Mocha"
 config.font = wezterm.font("IosevkaTerm Nerd Font")
 config.font_size = 18.0
 
+config.window_background_opacity = 0.95
+
 config.use_fancy_tab_bar = false
 
 config.tab_bar_at_bottom = true
