@@ -119,6 +119,7 @@ return {
       settings = { -- custom settings for lua
         Lua = {
           -- make the language server recognize "vim" global
+          hint = true,
           diagnostics = {
             globals = { "vim" },
           },
