@@ -13,8 +13,15 @@ end
 
 config.color_scheme = "Catppuccin Mocha"
 
-config.font = wezterm.font("IosevkaTerm Nerd Font")
-config.font_size = 18.0
+local fonts = {
+	"Monaspace Argon",
+	"CodeNewRoman Nerd Font",
+	"FiraCode Nerd Font",
+	"IosevkaTerm Nerd Font",
+}
+
+config.font = wezterm.font_with_fallback({ fonts[1] })
+config.font_size = 16
 
 -- config.window_background_opacity = 0.95
 
