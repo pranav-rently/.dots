@@ -11,17 +11,36 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "tokyonight"
 
 local fonts = {
+	"FiraCode Nerd Font",
+	"Monaspace Neon",
 	"Monaspace Argon",
 	"CodeNewRoman Nerd Font",
-	"FiraCode Nerd Font",
 	"IosevkaTerm Nerd Font",
 }
 
 config.font = wezterm.font_with_fallback({ fonts[1] })
 config.font_size = 16
+
+config.font_rules = {
+	{
+		intensity = "Bold",
+		italic = true,
+		font = wezterm.font({ family = "Maple Mono", weight = "Bold", style = "Italic" }),
+	},
+	{
+		italic = true,
+		intensity = "Half",
+		font = wezterm.font({ family = "Maple Mono", weight = "DemiBold", style = "Italic" }),
+	},
+	{
+		italic = true,
+		intensity = "Normal",
+		font = wezterm.font({ family = "Maple Mono", weight = "Regular", style = "Italic" }),
+	},
+}
 
 -- config.window_background_opacity = 0.95
 

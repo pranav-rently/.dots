@@ -13,6 +13,9 @@ return {
       defaults = {
         prompt_prefix = "  ",
         selection_caret = "  ",
+        layout_config = { prompt_position = "top" },
+        layout_strategy = "horizontal",
+        sorting_strategy = "ascending",
         path_display = { "absolute" },
         file_ignore_patterns = { ".git/", "node_modules/" },
         mappings = {

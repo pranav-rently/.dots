@@ -106,6 +106,12 @@ return {
       on_attach = on_attach,
     })
 
+    -- templ
+    lspconfig["templ"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
     -- ruby server
     lspconfig["solargraph"].setup({
       capabilities = capabilities,
