@@ -38,7 +38,7 @@ config.font_rules = {
 	{
 		italic = true,
 		intensity = "Normal",
-		font = wezterm.font({ family = "Maple Mono", weight = "Regular", style = "Italic" }),
+		font = wezterm.font({ family = "Maple Mono", weight = "DemiBold", style = "Italic" }),
 	},
 }
 
