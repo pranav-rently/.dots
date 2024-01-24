@@ -1,4 +1,7 @@
 -- :help options
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
+
 vim.opt.backup = false -- creates a backup file
 -- vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
 vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
@@ -50,6 +53,6 @@ vim.opt.spell = false
 
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 
-vim.g.netrw_browse_split = 0
-vim.g.netrw_winsize = 25
-vim.g.netrw_keepdir = 0
+-- vim.g.netrw_browse_split = 0
+-- vim.g.netrw_winsize = 25
+-- vim.g.netrw_keepdir = 0

@@ -76,6 +76,12 @@ return {
       on_attach = on_attach,
     })
 
+    -- astro language server
+    lspconfig["astro"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
     -- css server
     lspconfig["cssls"].setup({
       capabilities = capabilities,

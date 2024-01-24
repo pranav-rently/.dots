@@ -22,7 +22,6 @@ keymap("n", "<Down>", "<Nop>", opts)
 keymap("n", "<Left>", "<Nop>", opts)
 keymap("n", "<Right>", "<Nop>", opts)
 
-
 -- Navigation through Quick fix list
 keymap("n", "<leader>cn", ":cnext<CR>", opts)
 keymap("n", "<leader>cp", ":cprev<CR>", opts)
@@ -34,9 +33,9 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Copying to clipboard
-keymap("n", "<leader>y", "\"+y", opts)
-keymap("v", "<leader>y", "\"+y", opts)
-keymap("n", "<leader>Y", "gg\"+yG", opts)
+keymap("n", "<leader>y", '"+y', opts)
+keymap("v", "<leader>y", '"+y', opts)
+keymap("n", "<leader>Y", 'gg"+yG', opts)
 
 -- Keep the cursor centered
 keymap("n", "n", "nzzzv", opts)
@@ -55,7 +54,6 @@ keymap("n", "<C-K>", "<C-w>k", opts)
 keymap("n", "<C-L>", "<C-w>l", opts)
 
 keymap("n", "<leader>d", '"_d', opts)
-keymap("n", "<leader>pv", ":Lex 25<cr>", opts)
 
 -- Insert --
 -- Press jk fast to enter
