@@ -46,6 +46,9 @@ return {
         "prettier", -- prettier formatter
         "stylua", -- lua formatter
         "eslint_d", -- js linter
+        "isort",
+        "black",
+        "pylint",
       },
     })
   end,
