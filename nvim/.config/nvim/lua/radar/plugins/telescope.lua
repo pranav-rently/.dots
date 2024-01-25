@@ -38,7 +38,6 @@ return {
     local keymap = vim.keymap.set
 
     keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", opts)
-    -- keymap("n", "<leader>fs", builtin.grep_string({ search = vim.fn.input("Grep for > ") }), opts)
     keymap(
       "n",
       "<leader>fs",
@@ -52,6 +51,16 @@ return {
     keymap("n", "<leader>dd", "<cmd>Telescope diagnostics<cr>", opts)
   end,
   keys = {
+    {
+      "<leader>pw",
+      function()
+        local builtin = require("telescope.builtin")
+        local word = vim.fn.expand("<cword>")
+        builtin.grep_string({
+          search = word,
+        })
+      end,
+    },
     {
       "<leader>df",
       function()
