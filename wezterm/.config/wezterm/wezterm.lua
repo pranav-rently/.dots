@@ -24,7 +24,7 @@ local fonts = {
 	"IosevkaTerm Nerd Font",
 }
 
-config.font = wezterm.font_with_fallback({ fonts[1] })
+config.font = wezterm.font(fonts[1], { weight = 450 })
 config.font_size = 18
 
 config.font_rules = {
