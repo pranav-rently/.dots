@@ -41,3 +41,4 @@ alias m="git checkout master"
 alias mm="git checkout main"
 
 alias lg="lazygit"
+alias lvim="NVIM_APPNAME=LazyVim nvim"

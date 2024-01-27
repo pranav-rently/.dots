@@ -14,11 +14,14 @@ end
 config.color_scheme = "tokyonight"
 
 local fonts = {
-	"Monaspace Neon",
-	"IosevkaTerm Nerd Font",
 	"FiraCode Nerd Font",
+	"Monaspace Radon",
+	"Monaspace Xenon",
+	"Monaspace Krypton",
+	"Monaspace Neon",
 	"Monaspace Argon",
 	"CodeNewRoman Nerd Font",
+	"IosevkaTerm Nerd Font",
 }
 
 config.font = wezterm.font_with_fallback({ fonts[1] })
@@ -28,17 +31,17 @@ config.font_rules = {
 	{
 		intensity = "Bold",
 		italic = true,
-		font = wezterm.font({ family = "Victor Mono", weight = "Bold", style = "Italic" }),
+		font = wezterm.font({ family = "Maple Mono", weight = "Bold", style = "Italic" }),
 	},
 	{
 		italic = true,
 		intensity = "Half",
-		font = wezterm.font({ family = "Victor Mono", weight = "DemiBold", style = "Italic" }),
+		font = wezterm.font({ family = "Maple Mono", weight = "DemiBold", style = "Italic" }),
 	},
 	{
 		italic = true,
 		intensity = "Normal",
-		font = wezterm.font({ family = "Victor Mono", weight = "DemiBold", style = "Italic" }),
+		font = wezterm.font({ family = "Maple Mono", weight = "Regular", style = "Italic" }),
 	},
 }
 
