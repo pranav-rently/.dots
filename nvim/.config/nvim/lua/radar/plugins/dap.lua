@@ -88,6 +88,19 @@ return {
     -- { "<leader>dp", function() require("dap").pause() end, },
     -- { "<leader>ds", function() require("dap").session() end, },
     -- { "<leader>dw", function() require("dap.ui.widgets").hover() end, },
+    {
+      "<leader>du",
+      function()
+        require("dapui").toggle({})
+      end,
+    },
+    {
+      "<leader>de",
+      function()
+        require("dapui").eval()
+      end,
+      mode = { "n", "v" },
+    },
   },
   config = function()
     -- Golang
