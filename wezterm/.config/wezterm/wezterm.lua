@@ -13,19 +13,18 @@ end
 
 config.color_scheme = "tokyonight"
 
-local fonts = {
-	"FiraCode Nerd Font",
-	"Monaspace Radon",
-	"Monaspace Xenon",
-	"Monaspace Krypton",
-	"Monaspace Neon",
-	"Monaspace Argon",
-	"CodeNewRoman Nerd Font",
-	"IosevkaTerm Nerd Font",
-}
-
-config.font = wezterm.font(fonts[1], { weight = 450 })
 config.font_size = 18
+config.font = wezterm.font_with_fallback({
+	{ family = "FiraCode Nerd Font", weight = 450 },
+	{ family = "JetBrains Mono", weight = "Medium" },
+	{ family = "CodeNewRoman Nerd Font", weight = "Medium" },
+	{ family = "Monaspace Argon", weight = "Medium" },
+	{ family = "Monaspace Neon", weight = "Medium" },
+	{ family = "Monaspace Krypton", weight = "Regular" },
+	{ family = "Monaspace Xenon", weight = "Regular" },
+	{ family = "Monaspace Radon", weight = "Regular" },
+	{ family = "IosevkaTerm Nerd Font", weight = "Medium" },
+})
 
 config.font_rules = {
 	{
