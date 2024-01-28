@@ -16,15 +16,15 @@ return {
         layout_config = { prompt_position = "top" },
         layout_strategy = "horizontal",
         sorting_strategy = "ascending",
-        path_display = { "absolute" },
+        path_display = { "smart" },
         file_ignore_patterns = { ".git/", "node_modules/" },
         mappings = {
           i = {
             ["<Esc>"] = actions.close,
-            ["<Down>"] = actions.cycle_history_next,
-            ["<Up>"] = actions.cycle_history_prev,
-            ["<C-j>"] = actions.move_selection_next,
-            ["<C-k>"] = actions.move_selection_previous,
+            ["<C-Down>"] = actions.cycle_history_next,
+            ["<C-Up>"] = actions.cycle_history_prev,
+            ["<C-f>"] = actions.preview_scrolling_down,
+            ["<C-b>"] = actions.preview_scrolling_up,
             ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
           },
         },
@@ -32,34 +32,18 @@ return {
     })
 
     telescope.load_extension("fzf")
-
-    -- set keymaps
-    local opts = { noremap = true, silent = true }
-    local keymap = vim.keymap.set
-
-    keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", opts)
-    keymap(
-      "n",
-      "<leader>fs",
-      "<cmd>lua require('telescope.builtin').grep_string({ search = vim.fn.input('Grep for > ' )}) <cr>",
-      opts
-    )
-    keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
-    keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
-    keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
-    keymap("n", "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", opts)
-    keymap("n", "<leader>dd", "<cmd>Telescope diagnostics<cr>", opts)
   end,
   keys = {
+    { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
     {
-      "<leader>pw",
+      "<leader>fR",
       function()
         local builtin = require("telescope.builtin")
-        local word = vim.fn.expand("<cword>")
-        builtin.grep_string({
-          search = word,
+        builtin.oldfiles({
+          cwd = vim.fn.getcwd(),
         })
       end,
+      desc = "Recent (cwd)",
     },
     {
       "<leader>df",
@@ -84,7 +68,7 @@ return {
       end,
     },
     {
-      "<leader>gf",
+      "<leader>fg",
       function()
         local builtin = require("telescope.builtin")
         builtin.git_files({
@@ -93,16 +77,42 @@ return {
         })
       end,
     },
+    { "<leader>fb", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
+    { "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>" },
+
+    { '<leader>s"', "<cmd>Telescope registers<cr>", desc = "Registers" },
+    { "<leader>sa", "<cmd>Telescope autocommands<cr>", desc = "Autocommands" },
+    { "<leader>sc", "<cmd>Telescope command_history<cr>", desc = "Command History" },
+    { "<leader>sC", "<cmd>Telescope commands<cr>", desc = "Commands" },
+    { "<leader>sd", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "Document diagnostics" },
+    { "<leader>sD", "<cmd>Telescope diagnostics<cr>", desc = "Workspace diagnostics" },
+    { "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Help pages" },
+    { "<leader>sH", "<cmd>Telescope highlights<cr>", desc = "Search Highlight Groups" },
+    { "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
+    { "<leader>sm", "<cmd>Telescope marks<cr>", desc = "Marks" },
+    { "<leader>sM", "<cmd>Telescope man_pages<cr>", desc = "Man pages" },
+    { "<leader>ss", "<cmd>Telescope lsp_document_symbols<cr>", desc = "Goto symbol" },
+    { "<leader>sS", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", desc = "Goto symbol (Workspace)" },
+
+    { "<leader>gs", "<cmd>Telescope git_status<cr>", desc = "Git status" },
+    { "<leader>gc", "<cmd>Telescope git_commits<cr>", desc = "Git commits" },
+
+    -- TODO: Not working in .dots
     {
-      "<leader>gc",
+      "<leader>sw",
       function()
         local builtin = require("telescope.builtin")
-        local actions = require("telescope.actions")
-        builtin.git_branches({
-          -- attach_mappings = function(_, map)
-          --   map("i", "<C-d>", actions.git_delete_branch)
-          --   map("i", "<C-d>", actions.git_delete_branch)
-          -- end,
+        builtin.grep_string({
+          cwd = vim.fn.getcwd(),
+        })
+      end,
+    },
+    {
+      "<leader>sW",
+      function()
+        local builtin = require("telescope.builtin")
+        builtin.grep_string({
+          word = "-w",
         })
       end,
     },

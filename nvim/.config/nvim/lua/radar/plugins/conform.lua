@@ -1,6 +1,22 @@
 return {
   "stevearc/conform.nvim",
-  event = { "BufReadPre", "BufNewFile" },
+  event = { "BufWritePre" },
+  keys = {
+    {
+      "<leader>cF",
+      function()
+        require("conform").format({ formatters = { "injected" } })
+      end,
+      mode = { "n", "v" },
+    },
+    {
+      "<leader>cf",
+      function()
+        require("conform").format({ lsp_fallback = true, async = true })
+      end,
+      mode = { "n", "v" },
+    },
+  },
   config = function()
     local conform = require("conform")
 
@@ -22,16 +38,8 @@ return {
       format_on_save = {
         lsp_fallback = true,
         async = false,
-        timeout_ms = 1000,
+        timeout_ms = 500,
       },
     })
-
-    vim.keymap.set({ "n", "v" }, "<leader><leader>f", function()
-      conform.format({
-        lsp_fallback = true,
-        async = false,
-        timeout_ms = 1000,
-      })
-    end)
   end,
 }

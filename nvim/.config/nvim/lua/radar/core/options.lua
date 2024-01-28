@@ -40,8 +40,7 @@ vim.opt.listchars = { tab = "» ", extends = "›", precedes = "‹", nbsp = "�
 vim.opt.fillchars = {
   foldopen = "",
   foldclose = "",
-  -- fold = "⸱",
-  fold = " ",
+  fold = "⸱",
   foldsep = " ",
   diff = "╱",
   eob = " ",
@@ -52,7 +51,3 @@ vim.opt.spelllang = "en_us"
 vim.opt.spell = false
 
 vim.cmd("set whichwrap+=<,>,[,],h,l")
-
--- vim.g.netrw_browse_split = 0
--- vim.g.netrw_winsize = 25
--- vim.g.netrw_keepdir = 0
