@@ -13,7 +13,7 @@ end
 
 config.color_scheme = "tokyonight"
 
-config.font_size = 18
+config.font_size = 16
 config.font = wezterm.font_with_fallback({
 	{ family = "FiraCode Nerd Font", weight = 450 },
 	{ family = "JetBrains Mono", weight = "Medium" },
