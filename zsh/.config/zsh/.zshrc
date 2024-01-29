@@ -18,3 +18,11 @@ alias luamake=/home/rently/builds/lua-language-server/3rd/luamake/luamake
 
 # opam configuration
 # bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"
+
+# pnpm
+export PNPM_HOME="/home/rently/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
