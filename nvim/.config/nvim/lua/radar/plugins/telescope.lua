@@ -9,6 +9,8 @@ return {
     local telescope = require("telescope")
     local actions = require("telescope.actions")
 
+    local trouble = require("trouble.providers.telescope")
+
     telescope.setup({
       defaults = {
         prompt_prefix = "  ",
@@ -26,6 +28,10 @@ return {
             ["<C-f>"] = actions.preview_scrolling_down,
             ["<C-b>"] = actions.preview_scrolling_up,
             ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+            ["<C-t>"] = trouble.open_with_trouble,
+          },
+          n = {
+            ["<C-t>"] = trouble.open_with_trouble,
           },
         },
       },
