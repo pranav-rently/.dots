@@ -15,8 +15,9 @@ config.color_scheme = "tokyonight"
 
 config.font_size = 16
 config.font = wezterm.font_with_fallback({
-	{ family = "FiraCode Nerd Font", weight = 450 },
-	{ family = "JetBrains Mono", weight = "Medium" },
+	{ family = "FiraCode Nerd Font", weight = "Regular" },
+	{ family = "JuliaMono", weight = "Regular" },
+	{ family = "JetBrains Mono", weight = "Light" },
 	{ family = "CodeNewRoman Nerd Font", weight = "Medium" },
 	{ family = "Monaspace Argon", weight = "Medium" },
 	{ family = "Monaspace Neon", weight = "Medium" },
@@ -30,17 +31,17 @@ config.font_rules = {
 	{
 		intensity = "Bold",
 		italic = true,
-		font = wezterm.font({ family = "Maple Mono", weight = "Bold", style = "Italic" }),
+		font = wezterm.font({ family = "Victor Mono", weight = "Bold", style = "Italic" }),
 	},
 	{
 		italic = true,
 		intensity = "Half",
-		font = wezterm.font({ family = "Maple Mono", weight = "DemiBold", style = "Italic" }),
+		font = wezterm.font({ family = "Victor Mono", weight = "DemiBold", style = "Italic" }),
 	},
 	{
 		italic = true,
 		intensity = "Normal",
-		font = wezterm.font({ family = "Maple Mono", weight = "Regular", style = "Italic" }),
+		font = wezterm.font({ family = "Victor Mono", weight = "DemiBold", style = "Italic" }),
 	},
 }
 
