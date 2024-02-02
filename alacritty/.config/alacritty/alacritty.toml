@@ -46,19 +46,19 @@ blinking = "Never"
 size = 15.0
 
 [font.bold]
-family = "Hack Nerd Font"
+family = "Fira Code"
 style = "Bold"
 
 [font.bold_italic]
-family = "Hack Nerd Font"
+family = "Victor Mono"
 style = "Bold Italic"
 
 [font.italic]
-family = "Hack Nerd Font"
+family = "Victor Mono"
 style = "Italic"
 
 [font.normal]
-family = "Hack Nerd Font"
+family = "Fira Code"
 style = "Regular"
 
 [font.glyph_offset]
