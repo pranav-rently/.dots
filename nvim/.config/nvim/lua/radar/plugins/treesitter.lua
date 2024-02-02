@@ -60,4 +60,13 @@ return {
       })
     end,
   },
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    event = { "BufEnter" },
+    enabled = true,
+    opts = { mode = "cursor", max_lines = 3 },
+    config = function()
+      require("treesitter-context").setup({})
+    end,
+  },
 }
