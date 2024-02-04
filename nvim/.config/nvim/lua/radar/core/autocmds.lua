@@ -24,3 +24,10 @@ autocmd("FileType", {
     vim.opt_local.spell = true
   end,
 })
+
+-- start insert in terminal
+autocmd("TermOpen", {
+  group = augroup("custom_buffer", { clear = true }),
+  pattern = "*",
+  command = "startinsert | set winfixheight",
+})

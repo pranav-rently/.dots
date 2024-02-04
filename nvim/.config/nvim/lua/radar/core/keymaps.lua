@@ -93,3 +93,6 @@ keymap("n", "<leader>xq", "<cmd>copen<cr>", { desc = "Quickfix List" })
 -- Navigation through Quick fix list
 keymap("n", "[q", ":cprev<CR>", opts)
 keymap("n", "]q", ":cnext<CR>", opts)
+
+-- Lazy
+keymap("n", "<leader>l", ":Lazy<CR>", opts)
