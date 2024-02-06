@@ -36,7 +36,6 @@ return {
         "rust_analyzer",
         "solargraph",
         "tailwindcss",
-        "dockerls",
       },
       automatic_installation = true, -- not the same as ensure_installed
     })

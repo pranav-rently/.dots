@@ -84,10 +84,11 @@ return {
       end,
     },
     { "<leader>fb", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
-    { "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>" },
+    { "<leader>/", "<cmd>Telescope live_grep<cr>" },
 
     { '<leader>s"', "<cmd>Telescope registers<cr>", desc = "Registers" },
     { "<leader>sa", "<cmd>Telescope autocommands<cr>", desc = "Autocommands" },
+    { "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Autocommands" },
     { "<leader>sc", "<cmd>Telescope command_history<cr>", desc = "Command History" },
     { "<leader>sC", "<cmd>Telescope commands<cr>", desc = "Commands" },
     { "<leader>sd", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "Document diagnostics" },
@@ -103,7 +104,6 @@ return {
     { "<leader>gs", "<cmd>Telescope git_status<cr>", desc = "Git status" },
     { "<leader>gc", "<cmd>Telescope git_commits<cr>", desc = "Git commits" },
 
-    -- TODO: Not working in .dots
     {
       "<leader>sw",
       function()

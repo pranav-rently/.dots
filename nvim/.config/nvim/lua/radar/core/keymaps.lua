@@ -6,14 +6,6 @@ local keymap = vim.keymap.set
 
 keymap("", "<Space>", "<Nop>", opts)
 
--- Modes
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
-
 -- Disable arrow keys
 keymap("n", "<Up>", "<Nop>", opts)
 keymap("n", "<Down>", "<Nop>", opts)
@@ -96,3 +88,6 @@ keymap("n", "]q", ":cnext<CR>", opts)
 
 -- Lazy
 keymap("n", "<leader>l", ":Lazy<CR>", opts)
+
+keymap("n", "gw", "*N")
+keymap("x", "gw", "*N")

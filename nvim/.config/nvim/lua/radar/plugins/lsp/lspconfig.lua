@@ -80,6 +80,14 @@ return {
       on_attach = on_attach,
     })
 
+    -- svelte language server
+    lspconfig["svelte"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      cmd = { "svelteserver", "--stdio" },
+      filetypes = { "svelte" },
+    })
+
     -- css server
     lspconfig["cssls"].setup({
       capabilities = capabilities,
