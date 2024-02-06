@@ -15,15 +15,14 @@ config.color_scheme = "tokyonight"
 config.font_size = 16
 config.font = wezterm.font_with_fallback({
 	{ family = "FiraCode Nerd Font", weight = "Regular" },
-	{ family = "JuliaMono", weight = "Regular" },
-	{ family = "JetBrains Mono", weight = "Light" },
-	{ family = "CodeNewRoman Nerd Font", weight = "Medium" },
-	{ family = "Monaspace Argon", weight = "Medium" },
+	{ family = "JetBrains Mono", weight = "Regular" },
 	{ family = "Monaspace Neon", weight = "Medium" },
+	{ family = "Monaspace Argon", weight = "Regular" },
+	{ family = "JuliaMono", weight = "Regular" },
+	{ family = "IosevkaTerm Nerd Font", weight = "Regular" },
 	{ family = "Monaspace Krypton", weight = "Regular" },
 	{ family = "Monaspace Xenon", weight = "Regular" },
 	{ family = "Monaspace Radon", weight = "Regular" },
-	{ family = "IosevkaTerm Nerd Font", weight = "Medium" },
 })
 
 config.font_rules = {
