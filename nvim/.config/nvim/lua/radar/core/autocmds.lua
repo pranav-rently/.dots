@@ -31,3 +31,12 @@ autocmd("TermOpen", {
   pattern = "*",
   command = "startinsert | set winfixheight",
 })
+
+-- set filetype for markdown
+autocmd({ "BufNewFile", "BufFilePre", "BufRead" }, {
+  group = augroup("custom_buffer", { clear = true }),
+  pattern = "*.md",
+  callback = function()
+    vim.cmd([[set filetype=markdown.pandoc]])
+  end,
+})
