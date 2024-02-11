@@ -4,9 +4,6 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 
 export MANWIDTH=999
-# use 'bat' as manpager
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-# use 'neovim' as manpager
 export MANPAGER="nvim +Man!"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -25,4 +22,11 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# pnpm
+export PNPM_HOME="/home/rently/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 

@@ -14,13 +14,8 @@ source $ZDOTDIR/zshrc
 # opam configuration
 # bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"
 
-# pnpm
-export PNPM_HOME="/home/rently/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+# starship prompt
+eval "$(starship init zsh)"
 
-# z directory jumping
-source ~/.config/z.sh
+# zoxide directory jumping
+eval "$(zoxide init zsh)"
