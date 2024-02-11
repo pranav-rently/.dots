@@ -1,5 +1,8 @@
 return {
   {
+    "tpope/vim-fugitive",
+  },
+  {
     "lewis6991/gitsigns.nvim",
     event = { "BufReadPre", "BufNewFile" },
     opts = {
@@ -40,18 +43,5 @@ return {
         virt_text_pos = "right_align",
       },
     },
-  },
-  {
-    "tpope/vim-fugitive",
-    event = { "BufReadPre", "BufNewFile" },
-    config = function()
-      -- set keymaps
-      local opts = { noremap = true, silent = true }
-      local keymap = vim.keymap.set
-
-      keymap("n", "<leader>gs", ":G<cr>", opts) -- for git status
-      keymap("n", "<leader>gj", ":diffget //3<cr>", opts) -- git conflicts - right
-      keymap("n", "<leader>gf", ":diffget //2<cr>", opts) -- git conflicts - left
-    end,
   },
 }

@@ -40,4 +40,10 @@ alias g="git"
 alias m="git checkout master"
 alias mm="git checkout main"
 
+# use neovim instead of vim
+alias vim="nvim"
+
 alias lg="lazygit"
+
+# LazyVim
+alias lvim="NVIM_APPNAME=LazyVim nvim"

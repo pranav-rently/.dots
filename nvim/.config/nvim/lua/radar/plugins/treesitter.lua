@@ -13,7 +13,6 @@ return {
           "astro",
           "bash",
           "c",
-          "c_sharp",
           "cpp",
           "css",
           "dockerfile",
@@ -57,7 +56,22 @@ return {
           use_virtual_text = true,
           lint_events = { "BufWrite", "CursorHold" },
         },
+        vim.filetype.add({
+          extension = {
+            mdx = "mdx",
+          },
+        }),
+        vim.treesitter.language.register("markdown", "mdx"),
       })
+    end,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    event = { "BufEnter" },
+    enabled = true,
+    opts = { mode = "cursor", max_lines = 3 },
+    config = function()
+      require("treesitter-context").setup({})
     end,
   },
 }
