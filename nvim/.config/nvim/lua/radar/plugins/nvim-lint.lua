@@ -23,6 +23,6 @@ return {
 
     vim.keymap.set("n", "<leader><leader>l", function()
       lint.try_lint()
-    end)
+    end, { desc = "Try Lint" })
   end,
 }

@@ -40,7 +40,7 @@ return {
     for i = 1, 9, 1 do
       vim.keymap.set("n", "<leader>" .. tostring(i), function()
         ui.nav_file(i)
-      end)
+      end, { desc = "Harpoon Navigate " .. tostring(i) })
     end
   end,
 }

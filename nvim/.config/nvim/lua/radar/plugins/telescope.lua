@@ -61,6 +61,7 @@ return {
           hidden = true,
         })
       end,
+      desc = "Dotfiles",
     },
     {
       "<leader>ff",
@@ -72,6 +73,7 @@ return {
           hidden = true,
         })
       end,
+      desc = "Find files",
     },
     {
       "<leader>fg",
@@ -82,6 +84,7 @@ return {
           hidden = true,
         })
       end,
+      desc = "Git files",
     },
     { "<leader>fb", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
     { "<leader>/", "<cmd>Telescope live_grep<cr>" },
@@ -112,6 +115,7 @@ return {
           cwd = vim.fn.getcwd(),
         })
       end,
+      desc = "Search word",
     },
     {
       "<leader>sW",
@@ -121,6 +125,7 @@ return {
           word = "-w",
         })
       end,
+      desc = "Search word (exact)",
     },
   },
 }

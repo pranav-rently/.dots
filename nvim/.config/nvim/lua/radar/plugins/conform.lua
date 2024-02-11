@@ -8,6 +8,7 @@ return {
         require("conform").format({ formatters = { "injected" } })
       end,
       mode = { "n", "v" },
+      desc = "Format (injected)",
     },
     {
       "<leader>cf",
@@ -15,6 +16,7 @@ return {
         require("conform").format({ lsp_fallback = true, async = true })
       end,
       mode = { "n", "v" },
+      desc = "Format (LSP)",
     },
   },
   config = function()

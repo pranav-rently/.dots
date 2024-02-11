@@ -20,32 +20,57 @@ return {
   config = function()
     local lspconfig = require("lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
-    local opts = { noremap = true, silent = true }
     local on_attach = function(_, bufnr)
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-      -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>cd", "<cmd>lua vim.diagnostic.open_float()<CR>", opts),
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "dp", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "dn", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
-      -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>e", "<cmd>lua vim.diagnostic.get()<CR>", opts)
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder<CR>", opts)
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder<CR>", opts)
-      vim.api.nvim_buf_set_keymap(
-        bufnr,
+      vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { buffer = bufnr, desc = "Goto Declaration" })
+      vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { buffer = bufnr, desc = "Goto Definition" })
+      vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", { buffer = bufnr, desc = "Hover" })
+      vim.keymap.set(
+        "n",
+        "gi",
+        "<cmd>lua vim.lsp.buf.implementation()<CR>",
+        { buffer = bufnr, desc = "Goto implementation" }
+      )
+      vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { buffer = bufnr, desc = "References" })
+      vim.keymap.set(
+        "n",
+        "<C-k>",
+        "<cmd>lua vim.lsp.buf.signature_help()<CR>",
+        { buffer = bufnr, desc = "Signature help" }
+      )
+      vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { buffer = bufnr, desc = "Rename" })
+      vim.keymap.set(
+        "n",
+        "<leader>ca",
+        "<cmd>lua vim.lsp.buf.code_action()<CR>",
+        { buffer = bufnr, desc = "Code action" }
+      )
+      vim.keymap.set(
+        "n",
+        "<leader>D",
+        "<cmd>lua vim.lsp.buf.type_definition()<CR>",
+        { buffer = bufnr, desc = "Type Definition" }
+      )
+      vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { buffer = bufnr, desc = "Prev Diagnostic" })
+      vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", { buffer = bufnr, desc = "Next Diagnostic" })
+      vim.keymap.set("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", { buffer = bufnr, desc = "" })
+      vim.keymap.set(
+        "n",
+        "<leader>wa",
+        "<cmd>lua vim.lsp.buf.add_workspace_folder<CR>",
+        { buffer = bufnr, desc = "Add workspace folder" }
+      )
+      vim.keymap.set(
+        "n",
+        "<leader>wr",
+        "<cmd>lua vim.lsp.buf.remove_workspace_folder<CR>",
+        { buffer = bufnr, desc = "Remove workspace folder" }
+      )
+      vim.keymap.set(
         "n",
         "<leader>wl",
         "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders))<CR>",
-        opts
+        { buffer = bufnr, desc = "List workspace folders" }
       )
-      -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader><leader>a", "<cmd>lua require'rust-tools'.hover_actions.hover_actions()<CR>", opts)
     end
 
     -- used to enable autocompletion (assign to every lsp server config)
