@@ -80,7 +80,7 @@ return {
     local signs = {
       DiagnosticSignError = " ",
       DiagnosticSignWarn = " ",
-      DiagnosticSignHint = "󰌵 ",
+      DiagnosticSignHint = " ",
       DiagnosticSignInfo = " ",
     }
     for type, icon in pairs(signs) do
@@ -198,7 +198,6 @@ return {
     lspconfig["rust_analyzer"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      -- cmd = { os.getenv("HOME") .. "/.local/bin/rust-analyzer" },
       cmd = { "rustup", "run", "stable", "rust-analyzer" },
       settings = {
         ["rust-analyzer"] = {
