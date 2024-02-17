@@ -9,7 +9,7 @@ return {
       signs = {
         add = {
           hl = "GitSignsAdd",
-          text = "",
+          text = "▎",
           numhl = "GitSignsAddNr",
           linehl = "GitSignsAddLn",
         },
@@ -21,13 +21,13 @@ return {
         },
         delete = {
           hl = "GitSignsDelete",
-          text = "",
+          text = "",
           numhl = "GitSignsDeleteNr",
           linehl = "GitSignsDeleteLn",
         },
         topdelete = {
           hl = "GitSignsDelete",
-          text = "",
+          text = "",
           numhl = "GitSignsDeleteNr",
           linehl = "GitSignsDeleteLn",
         },
@@ -43,5 +43,23 @@ return {
         virt_text_pos = "right_align",
       },
     },
+    config = function()
+      require("gitsigns").setup({
+        on_attach = function(buffer)
+          local gs = package.loaded.gitsigns
+
+          local function map(mode, l, r, desc)
+            vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
+          end
+
+          -- stylua: ignore start
+          map("n", "[h", gs.prev_hunk, "Prev Hunk")
+          map("n", "]h", gs.next_hunk, "Next Hunk")
+          map("n", "<leader>ghp", gs.preview_hunk_inline, "Preview Hunk Inline")
+          map("n", "<leader>ghd", gs.diffthis, "Diff this")
+          map("n", "<leader>ghD", function() gs.diffthis("~") end, "Diff This ~")
+        end,
+      })
+    end,
   },
 }
