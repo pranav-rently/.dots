@@ -106,6 +106,7 @@ return {
 
     { "<leader>gs", "<cmd>Telescope git_status<cr>", desc = "Git status" },
     { "<leader>gc", "<cmd>Telescope git_commits<cr>", desc = "Git commits" },
+    { "<leader>gb", "<cmd>Telescope git_branches<cr>", desc = "Git branches" },
 
     {
       "<leader>sw",

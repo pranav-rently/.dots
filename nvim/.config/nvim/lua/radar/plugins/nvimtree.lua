@@ -18,9 +18,17 @@ return {
         ignore_list = {},
       },
       git = {
+        enable = false,
+      },
+      diagnostics = {
         enable = true,
-        ignore = true,
-        timeout = 500,
+        show_on_dirs = true,
+        icons = {
+          hint = "",
+          info = "",
+          warning = "",
+          error = "",
+        },
       },
       renderer = {
         highlight_git = true,
