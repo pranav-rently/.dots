@@ -38,20 +38,10 @@ return {
             file = true,
             folder = true,
             folder_arrow = true,
-            git = true,
           },
           glyphs = {
             default = "",
             symlink = "",
-            git = {
-              unstaged = "",
-              staged = "S",
-              unmerged = "",
-              renamed = "➜",
-              deleted = "",
-              untracked = "U",
-              ignored = "◌",
-            },
             folder = {
               default = "",
               open = "",
