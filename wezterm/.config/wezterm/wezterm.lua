@@ -1,6 +1,5 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
-
 -- This table will hold the configuration.
 local config = {}
 
@@ -12,14 +11,14 @@ end
 
 config.color_scheme = "tokyonight"
 
-config.font_size = 16
+config.font_size = 16.5
 config.font = wezterm.font_with_fallback({
+	{ family = "JetBrains Mono Nerd Font", weight = "Regular" },
 	{ family = "FiraCode Nerd Font", weight = "Regular" },
-	{ family = "JetBrains Mono", weight = "Regular" },
-	{ family = "Monaspace Neon", weight = "Medium" },
-	{ family = "Monaspace Argon", weight = "Regular" },
 	{ family = "JuliaMono", weight = "Regular" },
 	{ family = "IosevkaTerm Nerd Font", weight = "Regular" },
+	{ family = "Monaspace Neon", weight = "Medium" },
+	{ family = "Monaspace Argon", weight = "Regular" },
 	{ family = "Monaspace Krypton", weight = "Regular" },
 	{ family = "Monaspace Xenon", weight = "Regular" },
 	{ family = "Monaspace Radon", weight = "Regular" },
