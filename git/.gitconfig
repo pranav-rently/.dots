@@ -1,6 +1,7 @@
 [user]
 	name = Pranav RK
 	email = pranav.r@rently.com
+	signingkey = /home/rently/.ssh/github-signing.pub
 [core]
 	editor = nvim
 	diff = auto
@@ -35,3 +36,13 @@
     path = ~/personal/.gitconfig
 [init]
 	defaultBranch = main
+[rerere]
+	enabled = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[log]
+	showSignature = true
+[gpg]
+	format = ssh
