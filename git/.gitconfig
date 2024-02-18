@@ -48,3 +48,5 @@
 	format = ssh
 [commit]
 	gpgsign = true
+[gpg "ssh"]
+	allowedSignersFile = /home/rently/.ssh/allowed_signers
