@@ -5,6 +5,9 @@ return {
     config = function()
       require("tokyonight").setup({
         style = "night",
+        styles = {
+          functions = { italic = true },
+        },
         transparent = true,
         sidebars = { "qf", "vista_kind", "terminal", "packer" },
       })
