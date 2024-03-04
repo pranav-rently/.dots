@@ -32,6 +32,7 @@ keymap("n", "J", "mzJ`z", opts)
 keymap("n", "<S-h>", "<cmd>bprevious<cr>")
 keymap("n", "<S-l>", "<cmd>bnext<cr>")
 keymap("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other buffer" })
+keymap("n", "<leader>bd", "<cmd>bdelete!<cr>", { desc = "Delete buffer" })
 
 -- Better window navigation
 keymap("n", "<C-H>", "<C-w>h", opts)

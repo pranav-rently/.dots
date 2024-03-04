@@ -40,3 +40,14 @@ autocmd({ "BufNewFile", "BufFilePre", "BufRead" }, {
     vim.cmd([[set filetype=markdown.pandoc]])
   end,
 })
+
+-- set italic diagnostic virtual text
+autocmd("LspAttach", {
+  pattern = "*",
+  callback = function()
+    vim.cmd([[highlight DiagnosticVirtualTextHint cterm=italic gui=italic]])
+    vim.cmd([[highlight DiagnosticVirtualTextInfo cterm=italic gui=italic]])
+    vim.cmd([[highlight DiagnosticVirtualTextWarning cterm=italic gui=italic]])
+    vim.cmd([[highlight DiagnosticVirtualTextError cterm=italic gui=italic]])
+  end,
+})
