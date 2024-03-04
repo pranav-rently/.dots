@@ -10,10 +10,16 @@
 	interactive = auto
 	ui = true
 	autocrlf = input
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
 [merge]
-	tool = vimdiff
+  conflictystyle = diff3
 [help]
 	autocorrect = 20
+[delta]
+  navigate = true # use n and N to move between diff sections
+  light = false   # set to true for light background
 [alias]
 	st = status
 	ci = commit
@@ -25,7 +31,7 @@
 	d = diff
 	dt = difftool
 [diff]
-	tool = vimdiff
+  colorMoved = default
 [difftool]
 	prompt = true
 [pull]
