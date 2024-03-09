@@ -52,7 +52,7 @@ return {
         },
       })
       -- load the colorscheme here
-      -- vim.cmd.colorscheme("catppuccin-frappe")
+      -- vim.cmd.colorscheme("catppuccin")
     end,
   },
 }

@@ -37,7 +37,7 @@ return {
   },
   config = function()
     local ui = require("harpoon.ui")
-    for i = 1, 9, 1 do
+    for i = 1, 4, 1 do
       vim.keymap.set("n", "<leader>" .. tostring(i), function()
         ui.nav_file(i)
       end, { desc = "Harpoon Navigate " .. tostring(i) })

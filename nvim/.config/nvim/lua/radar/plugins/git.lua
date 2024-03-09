@@ -53,6 +53,8 @@ return {
           -- stylua: ignore start
           map("n", "[h", gs.prev_hunk, "Prev Hunk")
           map("n", "]h", gs.next_hunk, "Next Hunk")
+          map("n", "<leader>ghS", gs.stage_buffer, "Stage Hunk")
+          map("n", "<leader>ghR", gs.reset_buffer, "Reset Buffer")
           map("n", "<leader>ghp", gs.preview_hunk_inline, "Preview Hunk Inline")
           map("n", "<leader>ghd", gs.diffthis, "Diff this")
           map("n", "<leader>ghD", function() gs.diffthis("~") end, "Diff This ~")
