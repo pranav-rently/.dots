@@ -1,6 +1,6 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: FiraMono Nerd Font;
+  font-family: Jetbrains Mono Nerd Font;
   font-size: 12px;
   font-weight: bold;
 }
@@ -26,14 +26,14 @@ window#waybar.solo {
 }
 */
 
-window#waybar.termite {
-  background-color: #3f3f3f;
-}
+/* window#waybar.termite { */
+/*   background-color: #3f3f3f; */
+/* } */
 
-window#waybar.chromium {
-  background-color: #000000;
-  border: none;
-}
+/* window#waybar.chromium { */
+/*   background-color: #000000; */
+/*   border: none; */
+/* } */
 
 #workspaces button {
   padding: 0 5px;
