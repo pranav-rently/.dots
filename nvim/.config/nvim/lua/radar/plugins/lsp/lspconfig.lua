@@ -19,6 +19,7 @@ return {
   },
   config = function()
     local lspconfig = require("lspconfig")
+    -- local util = require("lspconfig.util")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
     local on_attach = function(_, bufnr)
@@ -92,6 +93,27 @@ return {
       capabilities = capabilities,
       on_attach = on_attach,
     })
+
+    -- eslint server
+    -- lspconfig["eslint"].setup({
+    --   capabilities = capabilities,
+    --   on_attach = function(_, bufnr)
+    --     vim.api.nvim_create_autocmd("BufWritePre", {
+    --       buffer = bufnr,
+    --       command = "EsLintFixAll",
+    --     })
+    --   end,
+    --   root_dir = util.root_pattern(
+    --     ".eslintrc",
+    --     ".eslintrc.js",
+    --     ".eslintrc.cjs",
+    --     ".eslintrc.yaml",
+    --     ".eslintrc.yml",
+    --     ".eslintrc.json",
+    --     ".eslint.config.js",
+    --     ".eslint.config.mjs"
+    --   ),
+    -- })
 
     -- python server
     lspconfig["pyright"].setup({
