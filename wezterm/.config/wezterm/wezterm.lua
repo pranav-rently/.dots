@@ -9,9 +9,11 @@ end
 
 config.color_scheme = "Catppuccin Mocha"
 
-config.font_size = 14.0
+config.font_size = 14
 config.font = wezterm.font_with_fallback({
 	{ family = "FiraCode Nerd Font", weight = 450 },
+	{ family = "Dank Mono", weight = "Regular" },
+	{ family = "MonoLisaTrial", weight = "Regular" },
 	{ family = "IosevkaTerm Nerd Font", weight = "Regular" },
 	{ family = "JetBrains Mono Nerd Font", weight = "Regular" },
 	{ family = "JuliaMono", weight = "Regular" },
@@ -40,7 +42,7 @@ config.font_rules = {
 	},
 }
 
--- config.window_background_opacity = 0.95
+-- config.window_background_opacity = 0.85
 
 config.warn_about_missing_glyphs = false
 
