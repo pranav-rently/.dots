@@ -1,5 +1,6 @@
 return {
   "mfussenegger/nvim-dap",
+  event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     {
       "rcarriga/nvim-dap-ui",
@@ -18,6 +19,9 @@ return {
           dapui.close({})
         end
       end,
+    },
+    {
+      "nvim-neotest/nvim-nio",
     },
     {
       "theHamsta/nvim-dap-virtual-text",
