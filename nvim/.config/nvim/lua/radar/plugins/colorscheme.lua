@@ -6,7 +6,7 @@ return {
       require("tokyonight").setup({
         style = "moon",
         styles = {
-          functions = { italic = true },
+          -- functions = { italic = true },
         },
         transparent = true,
         sidebars = { "qf", "vista_kind", "terminal", "packer" },

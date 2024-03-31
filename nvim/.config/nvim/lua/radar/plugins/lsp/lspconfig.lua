@@ -3,7 +3,6 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
-    "simrat39/rust-tools.nvim",
   },
   opts = {
     diagnostics = {
@@ -94,27 +93,6 @@ return {
       on_attach = on_attach,
     })
 
-    -- eslint server
-    -- lspconfig["eslint"].setup({
-    --   capabilities = capabilities,
-    --   on_attach = function(_, bufnr)
-    --     vim.api.nvim_create_autocmd("BufWritePre", {
-    --       buffer = bufnr,
-    --       command = "EsLintFixAll",
-    --     })
-    --   end,
-    --   root_dir = util.root_pattern(
-    --     ".eslintrc",
-    --     ".eslintrc.js",
-    --     ".eslintrc.cjs",
-    --     ".eslintrc.yaml",
-    --     ".eslintrc.yml",
-    --     ".eslintrc.json",
-    --     ".eslint.config.js",
-    --     ".eslint.config.mjs"
-    --   ),
-    -- })
-
     -- python server
     lspconfig["pyright"].setup({
       capabilities = capabilities,
@@ -129,12 +107,6 @@ return {
 
     -- bash server
     lspconfig["bashls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
-    -- templ
-    lspconfig["templ"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })
@@ -207,6 +179,12 @@ return {
           },
         },
       },
+    })
+
+    -- erlang
+    lspconfig["erlangls"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
     })
   end,
 }
