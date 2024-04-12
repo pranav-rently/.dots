@@ -42,12 +42,12 @@ autocmd({ "BufNewFile", "BufFilePre", "BufRead" }, {
 })
 
 -- set italic diagnostic virtual text
-autocmd("LspAttach", {
-  pattern = "*",
-  callback = function()
-    vim.cmd([[highlight DiagnosticVirtualTextHint cterm=italic gui=italic]])
-    vim.cmd([[highlight DiagnosticVirtualTextInfo cterm=italic gui=italic]])
-    vim.cmd([[highlight DiagnosticVirtualTextWarning cterm=italic gui=italic]])
-    vim.cmd([[highlight DiagnosticVirtualTextError cterm=italic gui=italic]])
-  end,
-})
+-- autocmd("LspAttach", {
+--   pattern = "*",
+--   callback = function()
+--     vim.cmd([[highlight DiagnosticVirtualTextHint cterm=italic gui=italic]])
+--     vim.cmd([[highlight DiagnosticVirtualTextInfo cterm=italic gui=italic]])
+--     vim.cmd([[highlight DiagnosticVirtualTextWarn cterm=italic gui=italic]])
+--     vim.cmd([[highlight DiagnosticVirtualTextError cterm=italic gui=italic]])
+--   end,
+-- })

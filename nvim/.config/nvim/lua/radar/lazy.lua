@@ -18,7 +18,7 @@ require("lazy").setup({
   spec = {
     { import = "radar.plugins" },
     { import = "radar.plugins.lsp" },
-    { import = "radar.plugins.ai" },
+    -- { import = "radar.plugins.ai" },
   },
   install = {
     -- try to load one of these colorschemes when starting an installation during startup
