@@ -8,12 +8,6 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# Colorize ls output
-# alias ls='ls --color=auto'
-# alias la='ls -a'
-# alias ll='ls -l'
-# alias lla='ls -la'
-
 # exa instead of ls
 alias ls='exa --color=always --grid --icons --group-directories-first'
 alias la='exa -a --color=always --grid --icons --group-directories-first'
@@ -44,6 +38,9 @@ alias mm="git checkout main"
 alias vim="nvim"
 
 alias lg="lazygit"
+
+# use zoxide for directory jumping
+alias cd="z"
 
 # LazyVim
 alias lvim="NVIM_APPNAME=LazyVim nvim"
