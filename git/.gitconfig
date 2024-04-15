@@ -1,7 +1,7 @@
 [user]
 	name = Pranav RK
 	email = pranav.r@rently.com
-	signingkey = /home/rently/.ssh/github-signing.pub
+	signingkey = 00CBE2D2EF76FE88
 [core]
 	editor = nvim
 	diff = auto
@@ -50,9 +50,5 @@
 	sort = -committerdate
 [log]
 	showSignature = false
-[gpg]
-	format = ssh
 [commit]
 	gpgsign = true
-[gpg "ssh"]
-	allowedSignersFile = /home/rently/.ssh/allowed_signers

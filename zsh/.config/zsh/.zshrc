@@ -27,3 +27,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+GPG_TTY=$(tty)
+export GPG_TTY
