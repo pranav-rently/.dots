@@ -12,35 +12,35 @@ config.color_scheme = "Catppuccin Mocha"
 config.font_size = 14
 config.font = wezterm.font_with_fallback({
 	{ family = "FiraCode Nerd Font", weight = 450 },
-	{ family = "Dank Mono", weight = "Regular" },
-	{ family = "MonoLisaTrial", weight = "Regular" },
-	{ family = "IosevkaTerm Nerd Font", weight = "Regular" },
 	{ family = "JetBrains Mono Nerd Font", weight = "Regular" },
-	{ family = "JuliaMono", weight = "Regular" },
-	{ family = "Monaspace Neon", weight = "Medium" },
-	{ family = "Monaspace Argon", weight = "Regular" },
-	{ family = "Monaspace Krypton", weight = "Regular" },
-	{ family = "Monaspace Xenon", weight = "Regular" },
 	{ family = "Monaspace Radon", weight = "Regular" },
+	{ family = "Monaspace Xenon", weight = "Regular" },
+	{ family = "Monaspace Krypton", weight = "Regular" },
+	{ family = "Monaspace Argon", weight = "Regular" },
+	{ family = "Monaspace Neon", weight = "Medium" },
+	{ family = "JuliaMono", weight = "Regular" },
+	{ family = "IosevkaTerm Nerd Font", weight = "Regular" },
+	{ family = "Operator MonoLig Book", weight = "Regular" },
+	{ family = "MonoLisa Nerd Font", weight = "Regular" },
 })
 
-config.font_rules = {
-	{
-		intensity = "Bold",
-		italic = true,
-		font = wezterm.font({ family = "Victor Mono", weight = "Bold", style = "Italic" }),
-	},
-	{
-		italic = true,
-		intensity = "Half",
-		font = wezterm.font({ family = "Victor Mono", weight = "DemiBold", style = "Italic" }),
-	},
-	{
-		italic = true,
-		intensity = "Normal",
-		font = wezterm.font({ family = "Victor Mono", weight = "DemiBold", style = "Italic" }),
-	},
-}
+-- config.font_rules = {
+-- 	{
+-- 		intensity = "Bold",
+-- 		italic = true,
+-- 		font = wezterm.font({ family = "Victor Mono", weight = "Bold", style = "Italic" }),
+-- 	},
+-- 	{
+-- 		italic = true,
+-- 		intensity = "Half",
+-- 		font = wezterm.font({ family = "Victor Mono", weight = "DemiBold", style = "Italic" }),
+-- 	},
+-- 	{
+-- 		italic = true,
+-- 		intensity = "Normal",
+-- 		font = wezterm.font({ family = "Victor Mono", weight = "DemiBold", style = "Italic" }),
+-- 	},
+-- }
 
 -- config.window_background_opacity = 0.85
 
