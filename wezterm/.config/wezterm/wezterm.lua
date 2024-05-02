@@ -24,6 +24,8 @@ config.font = wezterm.font_with_fallback({
 	{ family = "MonoLisa Nerd Font", weight = "Regular" },
 })
 
+config.harfbuzz_features = { "zero", "cv02", "ss02", "ss03", "ss05" }
+
 -- config.font_rules = {
 -- 	{
 -- 		intensity = "Bold",
