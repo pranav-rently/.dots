@@ -34,7 +34,7 @@ return {
         "jsonls",
         "gopls",
         "rust_analyzer",
-        "ruby_ls",
+        "ruby_lsp",
         "tailwindcss",
       },
       automatic_installation = true, -- not the same as ensure_installed

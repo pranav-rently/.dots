@@ -30,6 +30,9 @@ return {
       renderer = {
         highlight_git = true,
         root_folder_modifier = ":t",
+        indent_markers = {
+          enable = true,
+        },
         icons = {
           show = {
             file = true,
