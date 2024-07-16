@@ -30,3 +30,6 @@ esac
 
 GPG_TTY=$(tty)
 export GPG_TTY
+
+# add Pulumi to the PATH
+export PATH=$PATH:/home/rently/.pulumi/bin

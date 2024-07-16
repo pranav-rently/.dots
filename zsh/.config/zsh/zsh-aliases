@@ -45,4 +45,6 @@ alias cd="z"
 # LazyVim
 alias lvim="NVIM_APPNAME=LazyVim nvim"
 
-alias docker="podman"
+# alias docker="podman"
+
+alias ff="fastfetch"
