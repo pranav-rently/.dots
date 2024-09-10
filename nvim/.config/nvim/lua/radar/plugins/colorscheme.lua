@@ -12,7 +12,7 @@ return {
         sidebars = { "qf", "vista_kind", "terminal", "packer" },
       })
       -- load the colorscheme here
-      -- vim.cmd.colorscheme("tokyonight")
+      vim.cmd.colorscheme("tokyonight")
     end,
   },
   {
@@ -81,7 +81,7 @@ return {
         -- },
       })
       -- load the colorscheme here
-      vim.cmd.colorscheme("catppuccin")
+      -- vim.cmd.colorscheme("catppuccin")
     end,
   },
 }
