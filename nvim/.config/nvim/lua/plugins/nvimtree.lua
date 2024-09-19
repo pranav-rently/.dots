@@ -2,6 +2,9 @@ return {
   "nvim-tree/nvim-tree.lua",
   version = "*",
   lazy = false,
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
   keys = {
     { "<leader>e", "<CMD>NvimTreeToggle<CR>" },
   },
@@ -22,27 +25,15 @@ return {
       git = {
         enable = false,
       },
-      diagnostics = {
-        enable = true,
-        show_on_dirs = true,
-        icons = {
-          hint = "",
-          info = "",
-          warning = "",
-          error = "",
-        },
-      },
       renderer = {
         highlight_git = true,
         root_folder_modifier = ":t",
-        indent_markers = {
-          enable = true,
-        },
         icons = {
           show = {
             file = true,
             folder = true,
             folder_arrow = true,
+            git = true,
           },
           glyphs = {
             default = "",
