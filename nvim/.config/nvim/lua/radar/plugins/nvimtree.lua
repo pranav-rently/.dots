@@ -14,6 +14,11 @@ return {
         update_cwd = true,
         ignore_list = {},
       },
+      actions = {
+        open_file = {
+          quit_on_open = true,
+        },
+      },
       git = {
         enable = false,
       },
