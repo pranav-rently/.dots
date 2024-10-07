@@ -1,14 +1,25 @@
 return {
-  { "catppuccin/nvim" },
-
-  -- Configure LazyVim to load gruvbox
+  {
+    "catppuccin/nvim",
+    opts = {
+      -- flavour = "mocha",
+    },
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    opts = {},
+  },
+  {
+    "rose-pine/neovim",
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      flavour = "mocha",
-      colorscheme = "catppuccin",
+      theme = "dark",
+      colorscheme = "rose-pine-moon",
       styles = {
         functions = { "italic" },
+        -- keywords = { "italic" },
       },
     },
   },

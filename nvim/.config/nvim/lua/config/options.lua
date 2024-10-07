@@ -4,6 +4,7 @@
 
 vim.opt.listchars = { tab = "→ ", extends = "›", precedes = "‹", nbsp = "␣", trail = "·", eol = "↲" }
 vim.opt.wrap = true
+vim.opt.colorcolumn = { "80", "120" }
 
 vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrw = 1

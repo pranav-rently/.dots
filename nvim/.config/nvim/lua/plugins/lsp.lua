@@ -12,6 +12,16 @@ return {
     end,
   },
   {
+    "hrsh7th/nvim-cmp",
+    opts = function(_, opts)
+      local cmp = require("cmp")
+      opts.window = {
+        completion = cmp.config.window.bordered({}),
+        documentation = cmp.config.window.bordered({}),
+      }
+    end,
+  },
+  {
     "neovim/nvim-lspconfig",
     opts = {
       inlay_hints = { enabled = false },
@@ -25,6 +35,7 @@ return {
           cmd = { "svelteserver", "--stdio" },
           filetype = { "svelte" },
         },
+        -- Lua
         lua_ls = {
           settings = {
             Lua = {
@@ -43,19 +54,22 @@ return {
             },
           },
         },
-        -- gopls = {
-        --   cmd = { "gopls" },
-        --   settings = {
-        --     gopls = {
-        --       experimentalPostfixCompletions = true,
-        --       analyses = {
-        --         unusedparams = true,
-        --         shadow = true,
-        --       },
-        --       staticcheck = true,
-        --     },
-        --   },
-        -- },
+        -- Go
+        gopls = {
+          cmd = { "gopls" },
+          settings = {
+            gopls = {
+              experimentalPostfixCompletions = true,
+              analyses = {
+                unusedparams = true,
+                shadow = true,
+              },
+              staticcheck = true,
+            },
+          },
+        },
+        -- Ruby
+        ruby_lsp = {},
       },
     },
   },
