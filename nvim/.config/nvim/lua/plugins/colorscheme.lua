@@ -16,7 +16,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       theme = "dark",
-      colorscheme = "rose-pine-moon",
+      colorscheme = "rose-pine",
       styles = {
         functions = { "italic" },
         -- keywords = { "italic" },
