@@ -1,7 +1,4 @@
-import = [
-  "~/.config/alacritty/catppuccin-mocha.toml",
-  # "~/.config/alacritty/tokyo-night.toml"
-]
+import = ["~/.config/alacritty/themes/gruvbox-material-hard-dark.toml"]
 live_config_reload = true
 
 [env]
@@ -17,20 +14,20 @@ blinking = "Never"
 size = 14.0
 
 [font.bold]
-family = "MesloLGL Nerd Font"
-style = "Bold"
+family = "Jetbrains Mono Nerd Font"
+# style = "Bold"
 
 [font.bold_italic]
-family = "MesloLGL Nerd Font"
-style = "Bold Italic"
+family = "Jetbrains Mono Nerd Font"
+# style = "Bold Italic"
 
 [font.italic]
-family = "MesloLGL Nerd Font"
-style = "Italic"
+family = "Jetbrains Mono Nerd Font"
+# style = "Italic"
 
 [font.normal]
-family = "MesloLGL Nerd Font"
-style = "Regular"
+family = "Jetbrains Mono Nerd Font"
+# style = "Medium"
 
 [font.glyph_offset]
 x = 0
