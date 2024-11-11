@@ -5,11 +5,11 @@
 }
 
 window#waybar {
-  background-color: #282828;
+  background: rgba(0, 0, 0, 0);
 }
 
 window#waybar.hidden {
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 /*-----module groups----*/
@@ -29,31 +29,19 @@ window#waybar.hidden {
 }
 
 #workspaces button {
-  padding: 2px;
+  padding: 0 2px;
   color: #fff;
-  background-color: #000;
-  margin-right: 5px;
-}
-
-#workspaces button.active {
-  color: #000;
-  background-color: #fff;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px;
 }
 
 #workspaces button.focused {
-  color: #d8dee9;
+  background-color: #fff;
+  color: #000;
+  border-bottom: none;
 }
 
 #workspaces button.urgent {
-  color: #11111b;
-  border-radius: 10px;
-}
-
-#workspaces button:hover {
-  color: #000;
-  background-color: #fff;
-  border-radius: 15px;
+  background-color: #cc241d;
 }
 
 #pulseaudio,
