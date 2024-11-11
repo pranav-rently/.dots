@@ -18,10 +18,6 @@
     }
   },
 
-  // "sway/mode": {
-  //     "format": "<span style=\"italic\">{}</span>"
-  // },
-
   "tray": {
     // "icon-size": 21,
     "spacing": 10
@@ -75,7 +71,7 @@
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "format-bluetooth": "{icon}  {volume}%",
-    "format-muted": "",
+    "format-muted": " Muted",
     "format-icons": {
       "headphone": "",
       "hands-free": "",
@@ -94,7 +90,7 @@
   "pulseaudio#microphone": {
     "format": "{format_source}",
     "format-source": " {volume}%",
-    "format-source-muted": "",
+    "format-source-muted": " Muted",
     "on-click-right": "pavucontrol -t 4",
     "scroll-step": 5
   }

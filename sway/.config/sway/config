@@ -29,6 +29,7 @@ gaps inner 2
 
 # set wallpaper using waypaper
 exec waypaper --restore
+exec mako &
 
 # window rules
 for_window [app_id="gnome-calculator"] floating enable
@@ -208,8 +209,8 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 #
 # Brightness
 #
-bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 2%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
 
 #
 # Status Bar:
