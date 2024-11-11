@@ -1,0 +1,101 @@
+{
+  "sway/workspaces": {
+    "on-click": "activate",
+    "active-only": false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十"
+    }
+  },
+
+  // "sway/mode": {
+  //     "format": "<span style=\"italic\">{}</span>"
+  // },
+
+  "tray": {
+    // "icon-size": 21,
+    "spacing": 10
+  },
+
+  "clock": {
+    "format": "{:%a %b %d %I:%M %p}"
+  },
+
+  // Backlight
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{percent}% {icon}",
+    "format-icons": ["🌑", "🌒", "🌒", "🌓", "🌓", "🌔", "🌔", "🌕", "🌕"]
+  },
+
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "  {essid}",
+    "format-ethernet": "󰈁 {ipaddr}",
+    "format-disconnected": "Disconnected ⚠",
+    "tooltip-format": " {ifname} via {gwaddri}",
+    "tooltip-format-wifi": "  {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
+    "tooltip-format-disconnected": "󰈂 Disconnected",
+    "max-length": 50,
+    "on-click": "nm-connection-editor"
+  },
+
+  "battery": {
+    "states": {
+      "good": 80,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "⚡ {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-icons": [" ", " ", " ", " ", " "]
+  },
+
+  "bluetooth": {
+    "format-disabled": "",
+    "format-off": "",
+    "interval": 30,
+    "on-click": "blueman-manager",
+    "format-no-controller": ""
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon}  {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", "󰕾", ""],
+      "ignored-sinks": ["Easy Effects Sink"]
+    },
+    "scroll-step": 5.0,
+    "on-click-right": "pavucontrol -t 3",
+    "smooth-scrolling-threshold": 1
+  },
+
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "on-click-right": "pavucontrol -t 4",
+    "scroll-step": 5
+  }
+}

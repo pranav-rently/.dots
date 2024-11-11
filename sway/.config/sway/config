@@ -1,10 +1,13 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
+default_border pixel 2
+default_floating_border none
 
-default_border none
+font pango:monospace 0
+
+titlebar_padding 1
+titlebar_border_thickness 1
+
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 ### Variables
 #
@@ -16,13 +19,11 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term wezterm
+set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
-
-include /etc/sway/config-vars.d/*
 
 gaps inner 2
 
@@ -41,7 +42,7 @@ for_window [app_id="pavucontrol"] floating enable
 #
 # Example configuration:
 
-output HDMI-A-1 resolution 1920x1080 position 1920,0
+# output HDMI-A-1 resolution 1920x1080 position 1920,0
 # output eDP-1 resolution 1920x1080 position 1920,0
 
 # You can get the names of your outputs by running: swaymsg -t get_outputs
@@ -68,6 +69,7 @@ input "1739:52839:SYNA8018:00_06CB:CE67_Touchpad" {
     tap enabled
     natural_scroll enabled
     middle_emulation enabled
+    pointer_accel 0.8
 }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -81,7 +83,7 @@ input "1739:52839:SYNA8018:00_06CB:CE67_Touchpad" {
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
@@ -201,6 +203,13 @@ bindsym $mod+r mode "resize"
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+#
+# Brightness
+#
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 #
 # Status Bar:
