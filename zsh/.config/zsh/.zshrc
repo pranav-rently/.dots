@@ -7,7 +7,7 @@ source $ZDOTDIR/zshrc
 
 # asdf completions
 . "$HOME/.asdf/asdf.sh"
-. "$HOME/.asdf/completions/asdf.bash"
+# . "$HOME/.asdf/completions/asdf.bash"
 
 [ -f "/home/rently/.ghcup/env" ] && source "/home/rently/.ghcup/env" # ghcup-env
 

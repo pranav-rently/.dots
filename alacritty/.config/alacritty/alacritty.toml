@@ -1,3 +1,4 @@
+[general]
 import = ["~/.config/alacritty/themes/gruvbox-material-hard-dark.toml"]
 live_config_reload = true
 
