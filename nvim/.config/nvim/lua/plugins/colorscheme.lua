@@ -2,12 +2,14 @@ return {
   {
     "catppuccin/nvim",
     opts = {
-      -- flavour = "mocha",
+      flavour = "mocha",
     },
   },
   {
     "rebelot/kanagawa.nvim",
-    opts = {},
+    opts = {
+      transparent = true,
+    },
   },
   {
     "rose-pine/neovim",
@@ -16,7 +18,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       theme = "dark",
-      colorscheme = "rose-pine",
+      colorscheme = "kanagawa",
       styles = {
         functions = { "italic" },
         -- keywords = { "italic" },

@@ -68,8 +68,6 @@ return {
             },
           },
         },
-        -- Ruby
-        ruby_lsp = {},
       },
     },
   },

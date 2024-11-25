@@ -1,7 +1,7 @@
 [user]
 	name = Pranav RK
 	email = pranav.r@rently.com
-	signingkey = 00CBE2D2EF76FE88
+	signingkey = EBF31D61FE835924
 [core]
 	editor = nvim
 	diff = auto
