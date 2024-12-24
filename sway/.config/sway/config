@@ -1,7 +1,7 @@
-default_border pixel 2
+default_border none
 default_floating_border none
 
-font pango:monospace 0
+font pango:monospace 8
 
 titlebar_padding 1
 titlebar_border_thickness 1
@@ -9,27 +9,24 @@ titlebar_border_thickness 1
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
-### Variables
-#
-# Logo key. Use Mod1 for Alt.
 set $mod Mod4
-# Home row direction keys, like vim
+
 set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
+
+# Terminal emulator
 set $term alacritty
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
+
+# Program launcher
 set $menu wofi drun
 
 gaps inner 2
 
 # set wallpaper using waypaper
-exec waypaper --restore
-exec mako &
+set $wallpapers_path $HOME/Pictures/Wallpapers
+output * bg `find $HOME/Pictures/Wallpapers/. -type f | shuf -n 1` fill
 
 # window rules
 for_window [app_id="gnome-calculator"] floating enable
@@ -37,11 +34,6 @@ for_window [app_id="waypaper"] floating enable
 for_window [app_id="pavucontrol"] floating enable
 
 ### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#
-# Example configuration:
 
 # output HDMI-A-1 resolution 1920x1080 position 1920,0
 # output eDP-1 resolution 1920x1080 position 1920,0
@@ -49,9 +41,6 @@ for_window [app_id="pavucontrol"] floating enable
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 ### Idle configuration
-#
-# Example configuration:
-#
 exec swayidle -w \
          timeout 300 'swaylock -f -c 000000' \
          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
@@ -65,7 +54,7 @@ exec swayidle -w \
 #
 # Example configuration:
 #
-input "1739:52839:SYNA8018:00_06CB:CE67_Touchpad" {
+input "type:touchpad" {
     dwt enabled
     tap enabled
     natural_scroll enabled
@@ -179,14 +168,9 @@ input "1739:52839:SYNA8018:00_06CB:CE67_Touchpad" {
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     # bindsym $mod+minus scratchpad show
-#
+ 
 # Resizing containers:
-#
 mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
     bindsym $left resize shrink width 10px
     bindsym $down resize grow height 10px
     bindsym $up resize shrink height 10px
@@ -198,24 +182,17 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
 # Multimedia
-#
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
-#
 # Brightness
-#
 bindsym XF86MonBrightnessUp exec brightnessctl set 2%+
 bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
 
-#
 # Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
 bar {
     swaybar_command waybar
 }

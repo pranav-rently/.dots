@@ -7,7 +7,7 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "tokyonight"
 
 config.font_size = 14
 config.font = wezterm.font_with_fallback({
@@ -15,8 +15,6 @@ config.font = wezterm.font_with_fallback({
 	{ family = "Iosevka Nerd Font", weight = "Regular" },
 	{ family = "JetBrains Mono Nerd Font", weight = "Regular" },
 	{ family = "Zed Mono Nerd Font", weight = "Regular" },
-	{ family = "Mononoki Nerd Font", weight = "Regular" },
-	{ family = "Rec Mono Casual Nerd Font", weight = "Regular" },
 })
 
 -- FiraCode

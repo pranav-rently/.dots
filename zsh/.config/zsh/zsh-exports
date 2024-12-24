@@ -13,6 +13,7 @@ export PATH="$HOME/builds/lua-language-server/bin:$PATH"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$HOME/.pulumi/bin"
+export PATH="$PATH:$HOME/.zig"
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
